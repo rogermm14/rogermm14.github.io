@@ -85,6 +85,8 @@
         <a href="https://rogermm14.github.io/eonerf/">project page</a>
         /
         <a href="https://openaccess.thecvf.com/content/CVPR2023W/EarthVision/papers/Mari_Multi-Date_Earth_Observation_NeRF_The_Detail_Is_in_the_Shadows_CVPRW_2023_paper.pdf">paper</a>
+        /
+	<a href="data/EONeRF_poster.pdf">poster</a>
         <p></p>
         <p>
         We present EO-NeRF, that reveals scene geometry from multi-date satellite images with an unprecedented level of detail. We propose a geometrically consistent shadow model and a radiometric decomposition of the scene more adapted to pansharpened satellite images.
@@ -109,7 +111,7 @@
 	<a href="https://ipolcore.ipol.im/demo/clientApp/demo.html?id=435">demo</a>
 	<p></p>
 	<p>
-	We evaluate the performance of the deep learning architectures <a href="https://github.com/JiaRenChang/PSMNet">PSM (CVPR 2018)</a> and <a href="https://github.com/gengshan-y/high-res-stereo">HSM (CVPR 2019)</a> on multiple pairs of high-resolution satellite images. 
+	We evaluate the performance of the deep learning architectures <a href="https://github.com/JiaRenChang/PSMNet">PSM (CVPR 2018)</a> and <a href="https://github.com/gengshan-y/high-res-stereo">HSM (CVPR 2019)</a> for disparity estimation on multiple pairs of high-resolution satellite images.
 	</p>
 	</td>
 	</tr>
@@ -132,6 +134,8 @@
 	<a href="https://openaccess.thecvf.com/content/CVPR2022W/EarthVision/papers/Mari_Sat-NeRF_Learning_Multi-View_Satellite_Photogrammetry_With_Transient_Objects_and_Shadow_CVPRW_2022_paper.pdf">paper</a>
 	/
 	<a href="https://github.com/centreborelli/satnerf">code</a>
+	/
+	<a href="data/SatNeRF_poster.pdf">poster</a>
 	<p></p>
 	<p>
 	Sat-NeRF is the first work in neural rendering for multi-date satellite images to demonstrate quantitatively convincing results in terms of surface reconstruction.
@@ -140,14 +144,126 @@
 	</tr>
 
 
+	<tr onmouseout="l1bplus_stop()" onmouseover="l1bplus_start()">
+	<td style="padding:20px;width:25%;vertical-align:middle">
+	<a href="images/L1B+_teaser.png">
+	<div class="one">
+	  <div class="two" id='l1bplus_image'>
+	  <img src='images/L1B+_after.png' width="160"></div>
+	  <img src='images/L1B+_before.png' width="160">
+	</div>
+	</a>
+	<script type="text/javascript">
+	  function l1bplus_start() {
+	    document.getElementById('l1bplus_image').style.opacity = "1";
+	  }
+
+	  function l1bplus_stop() {
+	    document.getElementById('l1bplus_image').style.opacity = "0";
+	  }
+	  l1bplus_stop()
+	</script>
+	</td>
+	<td style="padding:20px;width:75%;vertical-align:middle">
+	<papertitle>L1B+: A Perfect Sensor Localization Model for Simple Satellite Stereo Reconstruction from Push-Frame Image Strips</papertitle>
+	<br>
+	<strong>Roger Marí‬</strong>, Thibaud Ehret, ‪Jérémy Anger, Carlo de Franchis, Gabriele Facciolo
+	<br>
+	<em>CVPR</em>, 2019
+	<br>
+	<a href="https://isprs-annals.copernicus.org/articles/V-1-2022/137/2022/isprs-annals-V-1-2022-137-2022.pdf">paper</a>
+	/
+	<a href="data/L1B+_poster.pdf">poster</a>
+	<p></p>
+	<p>
+	We emulate a perfect sensor to generate a single large-scale image from a fragmented push-frame strip. The resulting product simplifies 3D reconstruction from push-frame acquisitions.
+	</p>
+	</td>
+	</tr>
+
+	<tr>
+	<td style="padding:20px;width:25%;vertical-align:middle">
+	<a href="images/BAipol_teaser.png"><img src="images/BAipol_teaser.png" alt="blind-date" width="160" height="160"></a>
+	</td>
+	<td width="75%" valign="middle">
+	<papertitle>A Generic Bundle Adjustment Methodology for Indirect RPC Model Refinement of Satellite Imagery</papertitle>
+	<br>
+	<strong>Roger Marí‬</strong>, Carlo de Franchis, Enric Meinhardt-Llopis, ‪Jérémy Anger, Gabriele Facciolo
+	<br>
+	<em>IPOL</em>, 2021
+	<br>
+	<a href="https://www.ipol.im/pub/art/2021/352/">paper</a>
+	/
+	<a href="https://ipolcore.ipol.im/demo/clientApp/demo.html?id=352">demo</a>
+	/
+	<a href="https://github.com/centreborelli/sat-bundleadjust">code</a>
+	<p></p>
+	<p>
+	We propose a generic bundle adjustment method for multi-view stereo pipelines for satellite images. The RPC camera models of the input views are refined with a rotation that compensates localization errors related to the attitude angles encoding the satellite orientation.
+	</p>
+	</td>
+	</tr>
 
 
+	<tr>
+	<td style="padding:20px;width:25%;vertical-align:middle">
+	<a href="images/ToBAorNot_teaser.png"><img src="images/ToBAorNot_teaser.png" alt="blind-date" width="160" height="160"></a>
+	</td>
+	<td width="75%" valign="middle">
+	<papertitle>To Bundle Adjust or Not: A Comparison of Relative Geolocation Correction Strategies for Satellite Multi-View Stereo</papertitle>
+	<br>
+	<strong>Roger Marí‬</strong>, Carlo de Franchis, Enric Meinhardt-Llopis, ‪Gabriele Facciolo
+	<br>
+	<em>ICCV Workshops</em>, 2019
+	<br>
+	<a href="https://rogermm14.github.io/bundle-adjust-or-not/">project page</a>
+	/
+	<a href="https://openaccess.thecvf.com/content_ICCVW_2019/papers/3DRW/Mari_To_Bundle_Adjust_or_Not_A_Comparison_of_Relative_Geolocation_ICCVW_2019_paper.pdf">paper</a>
+	/
+	<a href="data/ToBAorNot_poster.pdf">poster</a>
+	<p></p>
+	<p>
+	This work investigates and compares different relative geolocation correction techniques for multi-view stereo pipelines for satellite images. We assess the impact on the output geometry.
+	</p>
+	</td>
+	</tr>
 
+	<tr onmouseout="radial_stop()" onmouseover="radial_start()">
+	<td style="padding:20px;width:25%;vertical-align:middle">
+	<a href="images/radial_teaser.png">
+	<div class="one">
+	  <div class="two" id='radial_image'>
+	  <img src='images/radial_after.png' width="160"></div>
+	  <img src='images/radial_before.png' width="160">
+	</div>
+	</a>
+	<script type="text/javascript">
+	  function radial_start() {
+	    document.getElementById('radial_image').style.opacity = "1";
+	  }
 
-
-
-
-
+	  function radial_stop() {
+	    document.getElementById('radial_image').style.opacity = "0";
+	  }
+	  radial_stop()
+	</script>
+	</td>
+	<td style="padding:20px;width:75%;vertical-align:middle">
+	<papertitle>Deep Single Image Camera Calibration with Radial Distortion</papertitle>
+	<br>
+	Manuel López-Antequera, <strong>Roger Marí‬</strong>, Pau Gargallo, Yubin Kuang, Javier Gonzalez-Jimenez, Gloria Haro
+	<br>
+	<em>CVPR</em>, 2019
+	<br>
+	<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Lopez_Deep_Single_Image_Camera_Calibration_With_Radial_Distortion_CVPR_2019_paper.pdf">paper</a>
+	/
+	<a href="https://openaccess.thecvf.com/content_CVPR_2019/supplemental/Lopez_Deep_Single_Image_CVPR_2019_supplemental.pdf">supp</a>
+	<p></p>
+	<p>
+	We present a deep learning method to predict extrinsic (tilt and roll) and intrinsic (focal length and radial distortion) parameters from a single image. We use a parameterization that is better suited for learning than directly predicting the camera parameters.
+	</p>
+	</td>
+	</tr>
 
 
 
