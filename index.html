@@ -26,7 +26,6 @@
               I am from Barcelona (1995), former student of <a href="https://www.upf.edu/">Universitat Pompeu Fabra</a>. In Barcelona I completed with honors a BSc in Audiovisual Systems Engineering and then a specialized MSc in Computer Vision. I moved to Paris in October 2018 to pursue my PhD under the supervision of <a href="http://dev.ipol.im/~facciolo/">Gabriele Facciolo</a>, at the <a href="https://centreborelli.ens-paris-saclay.fr/en">Centre Borelli</a> (<a href="https://ens-paris-saclay.fr/">ENS Paris-Saclay</a>). I defended my thesis <i><a href="https://www.theses.fr/2022UPASM045">Applications of multi-image remote sensing</a></i> in December 2022. In January 2024 I joined <a href="https://eurecat.org/home/en/">Eurecat</a> where I currently contribute to the coordination and development of AI and computer vision projects in Catalonia and Europe.
               </p>
               <p style="text-align:center">
-                <a href="mailto:rogermarimolas@gmail.com">Email</a> &nbsp/&nbsp
                 <a href="data/RogerMariMolas-CV.pdf">CV</a> &nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?user=TgpSmIsAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
                 <a href="https://www.researchgate.net/profile/Roger-Mari">ResearchGate</a> &nbsp/&nbsp
@@ -50,7 +49,129 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-				
+
+	<tr>
+	<td style="padding:20px;width:25%;vertical-align:middle">
+	<a href="images/ShadowDataset_teaser.png"><img src="images/ShadowDataset_teaser.png" alt="blind-date" width="160" height="160"></a>
+	</td>
+	<td width="75%" valign="middle">
+	<papertitle>S-EO: A Large-Scale Dataset for Geometry-Aware Shadow Detection in Remote Sensing Applications</papertitle>
+	<br>
+	Elías Masquil, <strong>Roger Marí‬</strong>, Thibaud Ehret, Enric Meinhardt-Llopis, Pablo Musé, Gabriele Facciolo 
+	<br>
+	<em>CVPR Workshops</em>, 2025
+	<br>
+	<a href="https://centreborelli.github.io/shadow-eo/">project page</a>
+	/
+	<a href="https://openaccess.thecvf.com/content/CVPR2025W/EarthVision/papers/Masquil_S-EO_A_Large-Scale_Dataset_for_Geometry-Aware_Shadow_Detection_in_Remote_CVPRW_2025_paper.pdf">paper</a>
+	/
+	<a href="https://huggingface.co/datasets/emasquil/shadow-eo">data</a>
+	<p></p>
+	<p>
+	This new dataset comprises multi-view satellite images (PAN, RGB), corresponding vegetation and shadow masks, bundle-adjusted RPC camera models and ground-truth DSMs for 702 different geographic areas of 500x500 m each across three different US cities.
+	</p>
+	</td>
+	</tr>			
+
+	<tr onmouseout="mapsLDM_stop()" onmouseover="mapsLDM_start()">
+	<td style="padding:20px;width:25%;vertical-align:middle">
+	<a href="images/mapsLDM_teaser.png">
+	<div class="one">
+	  <div class="two" id='mapsLDM_image'>
+	  <img src='images/mapsLDM_synthetic.png' width="160"></div>
+	  <img src='images/mapsLDM_real.png' width="160">
+	</div>
+	</a>
+	<script type="text/javascript">
+	  function mapsLDM_start() {
+	    document.getElementById('mapsLDM_image').style.opacity = "1";
+	  }
+
+	  function mapsLDM_stop() {
+	    document.getElementById('mapsLDM_image').style.opacity = "0";
+	  }
+	  mapsLDM_stop()
+	</script>
+	</td>
+	<td style="padding:20px;width:75%;vertical-align:middle">
+	<papertitle>Latent Diffusion Approaches for Conditional Generation of Aerial Imagery: A Study</papertitle>
+	<br>
+	<strong>Roger Marí‬</strong>, Rafael Redondo
+	<br>
+	<em>IPOL</em>, 2025
+	<br>
+	<a href="https://www.ipol.im/pub/art/2025/580/">paper</a>
+	/
+	<a href="https://ipolcore.ipol.im/demo/clientApp/demo.html?id=580">demo</a> 
+	/
+	<a href="https://github.com/rogermm14/ldm-maps-MLBriefs2024">code</a>
+	<p></p>
+	<p>
+         We evaluate the fidelity and realism of different architectural variations of a latent diffusion model, which is used
+to generate RGB aerial images conditioned to semantic maps.
+	</p>
+	</td>
+	</tr>	
+
+
+	<tr>
+	<td style="padding:20px;width:25%;vertical-align:middle">
+	<a href="images/pansharpenNeRF_teaser.png"><img src="images/pansharpenNeRF_teaser.png" alt="blind-date" width="160" height="160"></a>
+	</td>
+	<td width="75%" valign="middle">
+	<papertitle>Pseudo Pansharpening NeRF for Satellite Image Collections</papertitle>
+	<br>
+	Emilie Pic, Thibaud Ehret, Gabriele Facciolo, <strong>Roger Marí‬</strong>
+	<br>
+	<em>IGARSS</em>, 2024
+	<br>
+	<a href="https://hal.science/hal-05073893/document">paper</a>
+	<p></p>
+	<p>
+	EO-NeRF is extended to handle high-res panchromatic (PAN) and low-res multispectral (MS) inputs, eliminating the need for separate pansharpening. The resulting model can render pansharpened image surrogates with high-res color information for each input viewpoint.
+	</p>
+	</td>
+	</tr>
+
+
+	<tr onmouseout="diffnerf_stop()" onmouseover="diffnerf_start()">
+	<td style="padding:20px;width:25%;vertical-align:middle">
+	<a href="images/diffnerf_teaser.png">
+	<div class="one">
+	  <div class="two" id='diffnerf_image'>
+	  <img src='images/diffnerf_after.png' width="160"></div>
+	  <img src='images/diffnerf_before.png' width="160">
+	</div>
+	</a>
+	<script type="text/javascript">
+	  function diffnerf_start() {
+	    document.getElementById('diffnerf_image').style.opacity = "1";
+	  }
+
+	  function diffnerf_stop() {
+	    document.getElementById('diffnerf_image').style.opacity = "0";
+	  }
+	  diffnerf_stop()
+	</script>
+	</td>
+	<td style="padding:20px;width:75%;vertical-align:middle">
+	<papertitle>A Generic and Flexible Regularization Framework for NeRFs</papertitle>
+	<br>
+	Thibaud Ehret, <strong>Roger Marí‬</strong>, Gabriele Facciolo
+	<br>
+	<em>WACV</em>, 2024
+	<br>
+	<a href="https://openaccess.thecvf.com/content/WACV2024/papers/Ehret_A_Generic_and_Flexible_Regularization_Framework_for_NeRFs_WACV_2024_paper.pdf">paper</a>
+	/
+	<a href="https://github.com/tehret/diffnerf">code</a>
+	/
+	<a href="data/DiffNeRF_poster.pdf">poster</a>
+	<p></p>
+	<p>
+	We propose a generic regularization framework for NeRF based on differential geometry that outperforms previous state-of-the-art methods with only three input views. We compare our approach with <a href="https://m-niemeyer.github.io/regnerf/">RegNeRF (CVPR 2022)</a>.
+	</p>
+	</td>
+	</tr>
 
 
     <tr onmouseout="eonerf_stop()" onmouseover="eonerf_start()">
@@ -86,10 +207,12 @@
         /
         <a href="https://openaccess.thecvf.com/content/CVPR2023W/EarthVision/papers/Mari_Multi-Date_Earth_Observation_NeRF_The_Detail_Is_in_the_Shadows_CVPRW_2023_paper.pdf">paper</a>
         /
+        <a href="https://github.com/rogermm14/eonerf_code">code</a>
+        /
 	<a href="data/EONeRF_poster.pdf">poster</a>
         <p></p>
         <p>
-        We present EO-NeRF, that reveals scene geometry from multi-date satellite images with an unprecedented level of detail. We propose a geometrically consistent shadow model and a radiometric decomposition of the scene more adapted to pansharpened satellite images.
+        We present EO-NeRF, that reveals scene geometry from multi-date satellite images with an unprecedented level of detail. We propose a geometrically consistent shadow model and a radiometric decomposition of the scene adapted to pansharpened satellite images.
         </p>
       </td>
     </tr>
@@ -112,42 +235,6 @@
 	<p></p>
 	<p>
 	We evaluate the performance of the deep learning architectures <a href="https://github.com/JiaRenChang/PSMNet">PSM (CVPR 2018)</a> and <a href="https://github.com/gengshan-y/high-res-stereo">HSM (CVPR 2019)</a> for disparity estimation on multiple pairs of high-resolution satellite images.
-	</p>
-	</td>
-	</tr>
-
-
-	<tr onmouseout="diffnerf_stop()" onmouseover="diffnerf_start()">
-	<td style="padding:20px;width:25%;vertical-align:middle">
-	<a href="images/diffnerf_teaser.png">
-	<div class="one">
-	  <div class="two" id='diffnerf_image'>
-	  <img src='images/diffnerf_after.png' width="160"></div>
-	  <img src='images/diffnerf_before.png' width="160">
-	</div>
-	</a>
-	<script type="text/javascript">
-	  function diffnerf_start() {
-	    document.getElementById('diffnerf_image').style.opacity = "1";
-	  }
-
-	  function diffnerf_stop() {
-	    document.getElementById('diffnerf_image').style.opacity = "0";
-	  }
-	  diffnerf_stop()
-	</script>
-	</td>
-	<td style="padding:20px;width:75%;vertical-align:middle">
-	<papertitle>Regularization of NeRFs Using Differential Geometry</papertitle>
-	<br>
-	Thibaud Ehret, <strong>Roger Marí‬</strong>, Gabriele Facciolo
-	<br>
-	<em>Preprint</em>, 2022
-	<br>
-	<a href="https://arxiv.org/pdf/2206.14938.pdf">paper</a>
-	<p></p>
-	<p>
-	We propose a generic regularization framework for NeRF based on differential geometry that outperforms previous state-of-the-art methods with only three input views. We compare our approach with <a href="https://m-niemeyer.github.io/regnerf/">RegNeRF (CVPR 2022)</a>.
 	</p>
 	</td>
 	</tr>
