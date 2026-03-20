@@ -129,3 +129,141 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+
+/* everything below this line is for tags */
+
+.publication-filters {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-chip {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+  border: 1px solid #d0d7de;
+  background: #f6f8fa;
+  color: #1772d0;
+  border-radius: 999px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tag-chip:hover {
+  background: #eaeef2;
+}
+
+.tag-chip.active {
+  background: #1772d0;
+  color: #ffffff;
+  border-color: #1772d0;
+}
+
+.paper-tags {
+  margin-top: 8px;
+}
+
+.paper-tag {
+  display: inline-block;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #1772d0;
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 999px;
+  padding: 3px 9px;
+  margin: 0 6px 6px 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.paper-tag:hover {
+  background: #eaeef2;
+}
+
+.publications-section {
+  min-height: 500px;
+}
+
+.publication-filter-block {
+  margin-top: 0px;
+}
+
+.publication-filter-title {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+/* for the footer*/
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* standarize publication rows */
+
+.paper-media-cell {
+  padding: 20px;
+  width: 25%;
+  vertical-align: middle;
+}
+
+.paper-info-cell {
+  padding: 20px;
+  width: 75%;
+  vertical-align: middle;
+}
+
+.paper-media {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper-media img,
+.paper-media video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  display: block;
+}
+
+.paper-media .two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+
