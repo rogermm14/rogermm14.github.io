@@ -66,12 +66,59 @@
 	    <button class="tag-chip" type="button" data-filter="Neural Rendering">Neural Rendering</button>
 	    <button class="tag-chip" type="button" data-filter="Stereovision">Stereovision</button>
 	    <button class="tag-chip" type="button" data-filter="Generative AI">Generative AI</button>
+	    <button class="tag-chip" type="button" data-filter="Medical Imaging">Medical Imaging</button>
 	    <button class="tag-chip" type="button" data-filter="PhD Thesis">PhD Thesis</button>
 	  </div>
 	</div>
        </td>
      </tr>
 
+<! LAND, 2026 >
+<tr class="publication-row" data-tags="Generative AI;Medical Imaging" onmouseout="land_stop()" onmouseover="land_start()">
+  <td class="paper-media-cell">
+    <a href="images/LAND_after.mp4">
+      <div class="paper-media">
+        <img src="images/LAND_before.png" alt="LAND teaser">
+        <div class="two" id="land_image">
+          <video muted autoplay loop playsinline>
+            <source src="images/LAND_after.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </a>
+    <script type="text/javascript">
+      function land_start() {
+        document.getElementById('land_image').style.opacity = "1";
+      }
+
+      function land_stop() {
+        document.getElementById('land_image').style.opacity = "0";
+      }
+
+      land_stop();
+    </script>
+  </td>
+  <td class="paper-info-cell">
+    <papertitle>Anatomically Guided Latent Diffusion for High-Resolution 3D Chest CT Synthesis</papertitle>
+    <br>
+    Anna Oliveras, <strong>Roger Marí</strong>, Rafael Redondo, Oriol Guardià, Cynthia I. Ugwu, Ana Tost, Bhalaji Nagarajan, Carolina Migliorelli, Vicent Ribas, Petia Radeva
+    <br>
+    <em>Scientific Reports</em>, 2026
+    <br>
+    <a href="https://www.nature.com/articles/s41598-026-51634-4">paper</a>
+    /
+    <a href="https://doi.org/10.1038/s41598-026-51634-4">doi: 10.1038/s41598-026-51634-4</a>
+    <p></p>
+    <p>
+      LAND (Lung And Nodule Diffusion) is a latent diffusion model for synthetic chest CTs conditioned on lung and nodule masks. The generated volumes outperform state-of-the-art baselines and improve downstream nodule segmentation and classification.
+    </p>
+    <div class="paper-tags">
+      <button class="paper-tag" type="button" data-filter="Generative AI">Generative AI</button>
+      <button class="paper-tag" type="button" data-filter="Medical Imaging">Medical Imaging</button>
+    </div>
+  </td>
+</tr>
 
 <! MExECON, 2026 >
 <tr class="publication-row" data-tags="3D Reconstruction">
@@ -242,7 +289,7 @@
 </tr>
 
 <! Characterization of Synthetic Lung Nodules in Conditional Latent Diffusion of Chest CT Scans, 2024 >
-<tr class="publication-row" data-tags="Generative AI" onmouseout="chestCT2D_stop()" onmouseover="chestCT2D_start()">
+<tr class="publication-row" data-tags="Generative AI; Medical Imaging" onmouseout="chestCT2D_stop()" onmouseover="chestCT2D_start()">
   <td class="paper-media-cell">
     <a href="images/LDM_chestCT2d_teaser.png">
       <div class="paper-media">
@@ -285,6 +332,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     </p>
     <div class="paper-tags">
       <button class="paper-tag" type="button" data-filter="Generative AI">Generative AI</button>
+      <button class="paper-tag" type="button" data-filter="Medical Imaging">Medical Imaging</button>
     </div>
   </td>
 </tr>
