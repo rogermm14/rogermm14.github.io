@@ -96,14 +96,6 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Multimedia Technologies Unit, Eurecat · Barcelona</p>
           </div>
         </li>
-        <li class="timeline-item career">
-          <time datetime="2023-01">Jan. 2023</time>
-          <span class="timeline-marker" aria-hidden="true">●</span>
-          <div>
-            <strong>Started Postdoctoral position at Centre Borelli</strong>
-            <p>ENS Paris-Saclay · Paris, France</p>
-          </div>
-        </li>
         <li class="timeline-item event">
           <time datetime="2023-12">Dec. 2023</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
@@ -138,6 +130,14 @@ document.getElementById("timeline-component").innerHTML = `
               <a href="https://www.grss-ieee.org/events/earthvision-2023/" target="_blank" rel="noopener">Workshop website</a>
             </div>
             <p>Presented “EO-NeRF” at the EarthVision workshop</p>
+          </div>
+        </li>
+        <li class="timeline-item career">
+          <time datetime="2023-01">Jan. 2023</time>
+          <span class="timeline-marker" aria-hidden="true">●</span>
+          <div>
+            <strong>Started Postdoctoral position at Centre Borelli</strong>
+            <p>ENS Paris-Saclay · Paris, France</p>
           </div>
         </li>
         <li class="timeline-item career">
