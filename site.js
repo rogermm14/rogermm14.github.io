@@ -153,7 +153,9 @@
         row.style.display = rowMatches(row, selections) ? '' : 'none';
       });
       updateControls();
-      resetButton.hidden = Object.values(selections).every((value) => value === 'all');
+      const filtersAreClear = Object.values(selections).every((value) => value === 'all');
+      resetButton.disabled = filtersAreClear;
+      resetButton.setAttribute('aria-disabled', filtersAreClear);
     }
 
     filterMenus.forEach((menu) => {
@@ -175,6 +177,7 @@
 
     resetButton.addEventListener('click', function () {
       Object.keys(selections).forEach((key) => { selections[key] = 'all'; });
+      filterMenus.forEach((menu) => { menu.open = false; });
       applyFilters();
     });
 

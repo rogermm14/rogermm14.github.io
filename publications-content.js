@@ -30,7 +30,7 @@ document.getElementById("publications-component").innerHTML = `
 	      <summary><span class="filter-name">Venue</span><span class="filter-value">All</span></summary>
 	      <div class="filter-popover filter-options venue-options" id="venue-options"></div>
 	    </details>
-	    <button class="filter-reset" type="button" hidden>Clear filters</button>
+	    <button class="filter-reset" type="button" disabled aria-label="Clear all publication filters">Clear filters</button>
 	  </div>
 	</div>
        </td>
