@@ -37,6 +37,72 @@ document.getElementById("publications-component").innerHTML = `
      </tr>
 
 
+<! SeasonStereo, 2026 >
+<tr class="publication-row" data-tags="Earth Observation;3D Reconstruction;Stereovision;Generative AI" onmouseout="seasonstereo_stop()" onmouseover="seasonstereo_start()">
+  <td class="paper-media-cell">
+    <a href="images/SeasonStereo_after.mp4">
+      <div class="paper-media">
+        <img src="images/SeasonStereo_before.png" alt="SeasonStereo before">
+        <div class="two" id="seasonstereo_image">
+          <video muted autoplay loop playsinline>
+            <source src="images/SeasonStereo_after.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </a>
+  </td>
+  <td class="paper-info-cell">
+    <papertitle>SeasonStereo: Robust Dense Stereo Matching for Multi-Date Satellite Imagery via Generative AI</papertitle>
+    <br>
+    Álvaro Díaz Laureano, <strong>Roger Marí</strong>, Elías Masquil, Pablo Arias, Gabriele Facciolo
+    <br>
+    <em>ECCV Workshops</em>, 2026
+    <br>
+    <a href="https://github.com/multimedia-eurecat/SeasonStereo">coming soon...</a>
+    <p></p>
+    <p style="margin-bottom: 0;">
+      SeasonStereo enables dense stereo matching for multi-date satellite images with reduced supervision cost. We use generative AI to synthesize geometry-consistent seasonal training pairs, avoiding the need for real multi-date training data and LiDAR-based supervision.
+    <div class="paper-tags">
+      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
+      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
+      <button class="paper-tag" type="button" data-filter="Stereovision">Stereovision</button>
+      <button class="paper-tag" type="button" data-filter="Generative AI">Generative AI</button>
+    </div>
+
+  </td>
+</tr>
+
+<! Sat-bundleadjust v2, 2026 >
+<tr class="publication-row" data-tags="Earth Observation;Camera Calibration;Stereovision;3D Reconstruction">
+  <td class="paper-media-cell">
+    <a href="images/SAT-BAv2_teaser.png">
+      <div class="paper-media">
+        <img src="images/SAT-BAv2_teaser.png" alt="SAT-BA v2 teaser">
+      </div>
+    </a>
+  </td>
+  <td class="paper-info-cell">
+    <papertitle>Robust Satellite RPC Refinement via Bundle Adjustment with Season-Invariant Correspondences</papertitle>
+    <br>
+    <strong>Roger Marí</strong>, Elías Masquil, Xavier Bou, Thibaud Ehret, Gabriele Facciolo
+    <br>
+    <em>ECCV Workshops</em>, 2026
+    <br>
+    <a href="https://github.com/centreborelli/sat-bundleadjust-v2">coming soon...</a>
+    <p></p>
+    <p style="margin-bottom: 0;">
+      Sat-bundleadjust v2. We use season-invariant correspondences and similarity-based image-pair selection to refine RPC camera models of multi-date satellite images, reducing erroneous matches and computational cost while improving geometric accuracy.
+    <div class="paper-tags">
+      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
+      <button class="paper-tag" type="button" data-filter="Camera Calibration">Camera Calibration</button>
+      <button class="paper-tag" type="button" data-filter="Stereovision">Stereovision</button>
+      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
+    </div>
+
+  </td>
+</tr>
+
 <! Diachronic Stereo Matching, 2026 >
 <tr class="publication-row" data-tags="Earth Observation;3D Reconstruction;Stereovision;Awards">
   <td class="paper-media-cell">
