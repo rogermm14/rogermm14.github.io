@@ -59,7 +59,9 @@ document.getElementById("publications-component").innerHTML = `
     <br>
     <em>ECCV Workshops</em>, 2026
     <br>
-    <a href="https://github.com/multimedia-eurecat/SeasonStereo">coming soon...</a>
+    <a href="https://multimedia-eurecat.github.io/SeasonStereo">project page</a>
+    /
+    <a href="https://github.com/multimedia-eurecat/SeasonStereo">code</a>
     <p></p>
     <p style="margin-bottom: 0;">
       SeasonStereo enables dense stereo matching for multi-date satellite images with reduced supervision cost. We use generative AI to synthesize geometry-consistent seasonal training pairs, avoiding the need for real multi-date training data and LiDAR-based supervision.
@@ -89,7 +91,9 @@ document.getElementById("publications-component").innerHTML = `
     <br>
     <em>ECCV Workshops</em>, 2026
     <br>
-    <a href="https://github.com/centreborelli/sat-bundleadjust-v2">coming soon...</a>
+    <a href="https://centreborelli.github.io/sat-bundleadjust/v2/">project page</a>
+    /
+    <a href="https://github.com/centreborelli/sat-bundleadjust">code</a>
     <p></p>
     <p style="margin-bottom: 0;">
       Sat-bundleadjust v2. We use season-invariant correspondences and similarity-based image-pair selection to refine RPC camera models of multi-date satellite images, reducing erroneous matches and computational cost while improving geometric accuracy.
@@ -122,6 +126,10 @@ document.getElementById("publications-component").innerHTML = `
     <a href="https://centreborelli.github.io/diachronic-stereo">project page</a>
     /
     <a href="https://arxiv.org/pdf/2601.22808">paper</a>
+    /
+    <a href="https://github.com/emasquil/diachronicstereo">code</a>
+    /
+    <a href="https://huggingface.co/datasets/emasquil/diachronic-stereo">data</a>
     /
     <a href="https://doi.org/10.5194/isprs-annals-XI-2-2026-483-2026">doi: 10.5194/isprs-annals-XI-2-2026-483-2026</a>
     <p></p>
@@ -166,6 +174,8 @@ document.getElementById("publications-component").innerHTML = `
     <a href="https://aolivtous.github.io/publications/land.html">project page</a>
     /
     <a href="https://www.nature.com/articles/s41598-026-51634-4">paper</a>
+    /
+    <a href="https://github.com/aolivtous/LAND_3DChestCT">code</a>
     /
     <a href="https://doi.org/10.1038/s41598-026-51634-4">doi: 10.1038/s41598-026-51634-4</a>
     <p></p>
