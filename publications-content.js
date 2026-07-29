@@ -748,6 +748,8 @@ We analyze how well the model controls lung nodule placement and characteristics
     <br>
     <em>IPOL</em>, 2021
     <br>
+    <a href="https://centreborelli.github.io/sat-bundleadjust/v1/">project page</a>
+    /
     <a href="https://www.ipol.im/pub/art/2021/352/">paper</a>
     /
     <a href="https://ipolcore.ipol.im/demo/clientApp/demo.html?id=352">demo</a>
