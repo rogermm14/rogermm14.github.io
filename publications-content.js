@@ -61,6 +61,8 @@ document.getElementById("publications-component").innerHTML = `
     <br>
     <a href="https://multimedia-eurecat.github.io/SeasonStereo">project page</a>
     /
+    <a href="https://arxiv.org/abs/2607.27139">paper</a>
+    /
     <a href="https://github.com/multimedia-eurecat/SeasonStereo">code</a>
     <p></p>
     <p style="margin-bottom: 0;">
@@ -92,6 +94,8 @@ document.getElementById("publications-component").innerHTML = `
     <em>ECCV Workshops</em>, 2026
     <br>
     <a href="https://centreborelli.github.io/sat-bundleadjust/v2/">project page</a>
+    /
+    <a href="https://arxiv.org/abs/2607.26973">paper</a>
     /
     <a href="https://github.com/centreborelli/sat-bundleadjust">code</a>
     <p></p>
