@@ -16,6 +16,20 @@ document.getElementById("timeline-component").innerHTML = `
       </div>
 
       <ol class="timeline-list">
+        <li class="timeline-item event">
+          <time datetime="2026-09">Sep. 2026</time>
+          <span class="timeline-marker" aria-hidden="true">◆</span>
+          <div>
+            <div class="timeline-event-heading">
+              <strong>ECCV 2026 · Malmö, Sweden</strong>
+              <span class="separator">·</span>
+              <a href="https://eccv.ecva.net/Conferences/2026" target="_blank" rel="noopener">Conference website</a>
+              <span class="separator">·</span>
+              <a href="https://terrabytes-workshop.github.io" target="_blank" rel="noopener">Workshop website</a>
+            </div>
+            <p>Two articles presented at the TerraBytes workshop</p>
+          </div>
+        </li>
         <li class="timeline-item award">
           <time datetime="2026-06">Jun. 2026</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
@@ -179,7 +193,7 @@ document.getElementById("timeline-component").innerHTML = `
               <span class="separator">·</span>
               <a href="https://www.isprs2022-nice.com/" target="_blank" rel="noopener">Conference website</a>
             </div>
-            <p>Presented “L1B+” at the congress</p>
+            <p>Presented “L1B+” at the ISPRS Congress</p>
           </div>
         </li>
         <li class="timeline-item event">
@@ -191,7 +205,7 @@ document.getElementById("timeline-component").innerHTML = `
               <span class="separator">·</span>
               <a href="https://www.igarss2021.com/" target="_blank" rel="noopener">Conference website</a>
             </div>
-            <p>Remote attendance · Two articles accepted</p>
+            <p>Remote attendance · Two articles presented</p>
           </div>
         </li>
         <li class="timeline-item event">
