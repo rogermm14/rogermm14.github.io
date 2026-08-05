@@ -100,9 +100,13 @@ papertitle {
   font-weight: 700
 }
 
-name {
+.profile-name {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  margin: 0;
   font-size: 32px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 .one {
@@ -252,6 +256,56 @@ span.highlight {
   outline-offset: 1px;
 }
 
+.timeline-view-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: #1772d0;
+  background: transparent;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.timeline-view-toggle:hover,
+.timeline-view-toggle:focus {
+  color: #1772d0;
+  background: #edf5fd;
+}
+
+.timeline-view-toggle:focus-visible {
+  outline: 2px solid rgba(23, 114, 208, 0.2);
+  outline-offset: 1px;
+}
+
+.timeline-globe-view {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.timeline-globe-view[hidden] {
+  display: none;
+}
+
+.timeline-globe-intro {
+  margin: 0 0 10px;
+  color: #555;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.timeline-globe-frame {
+  display: block;
+  width: 100%;
+  height: 560px;
+  border: 0;
+}
+
 .legend-symbol {
   margin-right: 4px;
   font-style: normal;
@@ -384,7 +438,7 @@ span.highlight {
     display: none;
   }
 
-  name {
+  .profile-name {
     font-size: 28px;
   }
 

@@ -13,18 +13,7 @@ document.getElementById("publications-component").innerHTML = `
 	    </details>
 	    <details class="filter-menu" data-filter-menu="topic">
 	      <summary><span class="filter-name">Topic</span><span class="filter-value">All</span></summary>
-	      <div class="filter-popover filter-options topic-options">
-	        <button class="filter-option active" type="button" data-value="all">All</button>
-	        <button class="filter-option" type="button" data-value="Earth Observation">Earth Observation</button>
-	        <button class="filter-option" type="button" data-value="3D Reconstruction">3D Reconstruction</button>
-	        <button class="filter-option" type="button" data-value="Camera Calibration">Camera Calibration</button>
-	        <button class="filter-option" type="button" data-value="Neural Rendering">Neural Rendering</button>
-	        <button class="filter-option" type="button" data-value="Stereovision">Stereovision</button>
-	        <button class="filter-option" type="button" data-value="Generative AI">Generative AI</button>
-	        <button class="filter-option" type="button" data-value="Medical Imaging">Medical Imaging</button>
-	        <button class="filter-option" type="button" data-value="PhD Thesis">PhD Thesis</button>
-	        <button class="filter-option" type="button" data-value="Awards">Awards</button>
-	      </div>
+	      <div class="filter-popover filter-options topic-options" id="topic-options"></div>
 	    </details>
 	    <details class="filter-menu" data-filter-menu="venue">
 	      <summary><span class="filter-name">Venue</span><span class="filter-value">All</span></summary>
@@ -67,12 +56,7 @@ document.getElementById("publications-component").innerHTML = `
     <p></p>
     <p style="margin-bottom: 0;">
       SeasonStereo enables dense stereo matching for multi-date satellite images with reduced supervision cost. We use generative AI to synthesize geometry-consistent seasonal training pairs, avoiding the need for real multi-date training data and LiDAR-based supervision.
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-      <button class="paper-tag" type="button" data-filter="Stereovision">Stereovision</button>
-      <button class="paper-tag" type="button" data-filter="Generative AI">Generative AI</button>
-    </div>
+    </p>
 
   </td>
 </tr>
@@ -101,12 +85,7 @@ document.getElementById("publications-component").innerHTML = `
     <p></p>
     <p style="margin-bottom: 0;">
       Sat-bundleadjust v2. We use season-invariant correspondences and similarity-based image-pair selection to refine RPC camera models of multi-date satellite images, reducing erroneous matches and computational cost while improving geometric accuracy.
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="Camera Calibration">Camera Calibration</button>
-      <button class="paper-tag" type="button" data-filter="Stereovision">Stereovision</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-    </div>
+    </p>
 
   </td>
 </tr>
@@ -143,12 +122,6 @@ document.getElementById("publications-component").innerHTML = `
     <p style="margin-top: 0; font-weight: bold; color: purple;">
     🏆 ISPRS Best Young Author Award - XXV ISPRS Congress 2026
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-      <button class="paper-tag" type="button" data-filter="Stereovision">Stereovision</button>
-      <button class="paper-tag" type="button" data-filter="Awards">Awards</button>
-    </div>
 
   </td>
 </tr>
@@ -186,10 +159,6 @@ document.getElementById("publications-component").innerHTML = `
     <p>
       LAND (Lung And Nodule Diffusion) is a latent diffusion model for synthetic chest CTs conditioned on lung and nodule masks. The generated volumes outperform state-of-the-art baselines and improve downstream nodule segmentation and classification.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Generative AI">Generative AI</button>
-      <button class="paper-tag" type="button" data-filter="Medical Imaging">Medical Imaging</button>
-    </div>
   </td>
 </tr>
 
@@ -220,9 +189,6 @@ document.getElementById("publications-component").innerHTML = `
       <a href="https://xiuyuliang.cn/econ/">ECON (CVPR 2023)</a>
       to an arbitrary number of viewpoints, improving geometry and pose estimation without requiring network retraining.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-    </div>
   </td>
 </tr>
 
@@ -262,11 +228,6 @@ document.getElementById("publications-component").innerHTML = `
     <p style="margin-top: 0; font-weight: bold; color: purple;">
     🏆 Best Paper Award - 2026 ISPRS / CIPA 3D-ARCH Workshop
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-      <button class="paper-tag" type="button" data-filter="Neural Rendering">Neural Rendering</button>
-      <button class="paper-tag" type="button" data-filter="Awards">Awards</button>
-    </div>
   </td>
 </tr>
 
@@ -297,11 +258,6 @@ document.getElementById("publications-component").innerHTML = `
     <p>
       This new dataset comprises multi-view satellite images (PAN and RGB), corresponding vegetation and shadow masks, bundle-adjusted RPC camera models and ground-truth DSMs for 702 distinct geographic areas of 500x500 m each across three U.S. cities.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-      <button class="paper-tag" type="button" data-filter="Neural Rendering">Neural Rendering</button>
-    </div>
   </td>
 </tr>
 
@@ -336,10 +292,6 @@ document.getElementById("publications-component").innerHTML = `
       We evaluate the fidelity and realism of RGB aerial images generated by different architectural variants
       of a latent diffusion model conditioned on semantic maps.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Generative AI">Generative AI</button>
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-    </div>
   </td>
 </tr>
 
@@ -369,10 +321,6 @@ document.getElementById("publications-component").innerHTML = `
       We evaluate the fidelity and realism of different NeRF architectures for modeling specular surfaces,
       comparing <a href="https://dorverbin.github.io/refnerf/">Ref-NeRF</a> and <a href="https://imkanghan.github.io/projects/NRFF/main">NRFF</a> on a synthetic dataset with specular reflections.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-      <button class="paper-tag" type="button" data-filter="Neural Rendering">Neural Rendering</button>
-    </div>
   </td>
 </tr>
 
@@ -407,10 +355,6 @@ document.getElementById("publications-component").innerHTML = `
       We generate synthetic 2D chest CT imagery using a conditional latent diffusion model guided by bounding-box masks and attribute embeddings.
 We analyze how well the model controls lung nodule placement and characteristics, highlighting strengths and biases.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Generative AI">Generative AI</button>
-      <button class="paper-tag" type="button" data-filter="Medical Imaging">Medical Imaging</button>
-    </div>
   </td>
 </tr>
 
@@ -439,10 +383,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       This paper reviews <a href="https://github.com/naruya/VaxNeRF">VaxNeRF</a>. NeRF-based rendering is accelerated by restricting sampling to the visual hull, the maximal volume consistent with multi-view object silhouettes.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Neural Rendering">Neural Rendering</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-    </div>
   </td>
 </tr>
 
@@ -469,11 +409,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       Despite the important differences between optical and synthetic aperture radar (SAR) image formation models, we show that radiance fields can be extended to radar images.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-      <button class="paper-tag" type="button" data-filter="Neural Rendering">Neural Rendering</button>
-    </div>
   </td>
 </tr>
 
@@ -501,11 +436,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       EO-NeRF is extended to handle high-res panchromatic (PAN) and low-res multispectral (MS) inputs, eliminating the need for separate pansharpening. The resulting model can render pansharpened image surrogates with high-res color information for each input viewpoint.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="Neural Rendering">Neural Rendering</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-    </div>
   </td>
 </tr>
 
@@ -540,10 +470,6 @@ We analyze how well the model controls lung nodule placement and characteristics
       We propose a generic regularization framework for NeRF based on differential geometry that outperforms previous state-of-the-art methods with only three input views. We compare our approach with
       <a href="https://m-niemeyer.github.io/regnerf/">RegNeRF (CVPR 2022)</a>.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Neural Rendering">Neural Rendering</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-    </div>
   </td>
 </tr>
 
@@ -582,11 +508,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       We present EO-NeRF, which reveals scene geometry from multi-date satellite images with an unprecedented level of detail. We propose a geometrically consistent shadow model and a radiometric decomposition of the scene adapted to pansharpened satellite images.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-      <button class="paper-tag" type="button" data-filter="Neural Rendering">Neural Rendering</button>
-    </div>
   </td>
 </tr>
 
@@ -613,9 +534,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       This thesis investigates 3D reconstruction from collections of high-resolution satellite images. The first part examines the mathematical modeling of satellite acquisition geometry, and the second part explores several applications of multi-image remote sensing.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="PhD Thesis">PhD Thesis</button>
-    </div>
   </td>
 </tr>
 
@@ -652,12 +570,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p style="margin-top: 0; font-weight: bold; color: purple;">
     🏆 Best Student Paper Award - 2022 IPOL MLBriefs Workshop
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="Stereovision">Stereovision</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-      <button class="paper-tag" type="button" data-filter="Awards">Awards</button>
-    </div>
   </td>
 </tr>
 
@@ -691,11 +603,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       Sat-NeRF is the first work in neural rendering for multi-date satellite images to demonstrate quantitatively convincing results in terms of surface reconstruction.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-      <button class="paper-tag" type="button" data-filter="Neural Rendering">Neural Rendering</button>
-    </div>
   </td>
 </tr>
 
@@ -727,12 +634,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       We emulate a perfect sensor to generate a single image from a fragmented push-frame strip. The resulting product simplifies large-scale 3D modeling from push-frame imagery.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="Camera Calibration">Camera Calibration</button>
-      <button class="paper-tag" type="button" data-filter="Stereovision">Stereovision</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-    </div>
   </td>
 </tr>
 
@@ -765,12 +666,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       We propose a generic bundle adjustment method for satellite multi-view stereo pipelines. The RPC camera models of the input views are refined with a rotation that compensates localization errors related to the attitude angles encoding the satellite orientation.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="Camera Calibration">Camera Calibration</button>
-      <button class="paper-tag" type="button" data-filter="Stereovision">Stereovision</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-    </div>
   </td>
 </tr>
 
@@ -803,12 +698,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       The RPC camera models of a time series of SkySat acquisitions are refined and used to compute a surface model for each date, which is used to measure the stockpile volume.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="Camera Calibration">Camera Calibration</button>
-      <button class="paper-tag" type="button" data-filter="Stereovision">Stereovision</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-    </div>
   </td>
 </tr>
 
@@ -838,10 +727,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       We describe a terrain-independent algorithm that derives an RPC camera model from a set of 3D-2D point correspondences using a regularized least-squares fit.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="Camera Calibration">Camera Calibration</button>
-    </div>
   </td>
 </tr>
 
@@ -872,12 +757,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       This work investigates and compares different relative geolocation correction techniques for multi-view stereo pipelines for satellite images. We assess the impact on the output geometry.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Earth Observation">Earth Observation</button>
-      <button class="paper-tag" type="button" data-filter="Camera Calibration">Camera Calibration</button>
-      <button class="paper-tag" type="button" data-filter="Stereovision">Stereovision</button>
-      <button class="paper-tag" type="button" data-filter="3D Reconstruction">3D Reconstruction</button>
-    </div>
   </td>
 </tr>
 
@@ -908,9 +787,6 @@ We analyze how well the model controls lung nodule placement and characteristics
     <p>
       We present a deep learning method to predict extrinsic (tilt and roll) and intrinsic (focal length and radial distortion) parameters from a single image. We use a parameterization that is better suited for learning than directly predicting the camera parameters.
     </p>
-    <div class="paper-tags">
-      <button class="paper-tag" type="button" data-filter="Camera Calibration">Camera Calibration</button>
-    </div>
   </td>
 </tr>
   

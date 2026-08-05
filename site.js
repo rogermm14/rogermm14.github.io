@@ -2,7 +2,38 @@
   function initTimeline(root) {
     const items = Array.from(root.querySelectorAll('.timeline-item'));
     const filters = Array.from(root.querySelectorAll('.timeline-filter'));
+    const timelineList = root.querySelector('.timeline-list');
+    const globeView = root.querySelector('.timeline-globe-view');
+    const globeFrame = root.querySelector('.timeline-globe-frame');
+    const viewToggle = root.querySelector('.timeline-view-toggle');
+    const viewIcon = root.querySelector('.timeline-view-icon');
+    const viewLabel = root.querySelector('.timeline-view-label');
     if (!items.length || !filters.length) return;
+
+    let activeCategory = 'all';
+
+    function syncGlobeFilter() {
+      if (!globeFrame || !globeFrame.contentWindow) return;
+      globeFrame.contentWindow.postMessage({
+        type: 'research-globe-filter',
+        category: activeCategory
+      }, '*');
+    }
+
+    function showGlobe(show) {
+      if (!timelineList || !globeView || !globeFrame || !viewToggle) return;
+      timelineList.hidden = show;
+      globeView.hidden = !show;
+      viewToggle.setAttribute('aria-pressed', show);
+      if (viewIcon) viewIcon.textContent = show ? '📋' : '🌍';
+      if (viewLabel) viewLabel.textContent = show ? 'Timeline view' : 'Globe view';
+
+      if (show && !globeFrame.getAttribute('src')) {
+        globeFrame.setAttribute('src', globeFrame.dataset.src);
+      } else if (show) {
+        syncGlobeFilter();
+      }
+    }
 
     const latestItem = items.reduce((latest, item) => {
       const itemDate = item.querySelector('time').getAttribute('datetime');
@@ -17,6 +48,7 @@
     filters.forEach((filter) => {
       const category = filter.dataset.category;
       filter.addEventListener('click', function () {
+        activeCategory = category;
         items.forEach((item) => {
           const hidden = category !== 'all' && !item.classList.contains(category);
           item.hidden = hidden;
@@ -32,8 +64,24 @@
           button.classList.toggle('active', active);
           button.setAttribute('aria-pressed', active);
         });
+
+        syncGlobeFilter();
       });
     });
+
+    if (globeFrame) globeFrame.addEventListener('load', syncGlobeFilter);
+    if (viewToggle) {
+      viewToggle.addEventListener('click', function () {
+        showGlobe(globeView.hidden);
+      });
+    }
+
+    if (window.location.hash === '#research-globe') {
+      const details = root.querySelector('.timeline-details');
+      if (details) details.open = true;
+      showGlobe(true);
+      requestAnimationFrame(() => root.scrollIntoView({ block: 'start' }));
+    }
 
     filters[0].setAttribute('aria-pressed', 'true');
     items[items.length - 1].classList.add('last-visible');
@@ -43,10 +91,11 @@
     const publicationRows = Array.from(root.querySelectorAll('.publication-row'));
     const filterMenus = Array.from(root.querySelectorAll('.filter-menu'));
     const yearOptions = root.querySelector('#year-options');
+    const topicOptions = root.querySelector('#topic-options');
     const venueOptions = root.querySelector('#venue-options');
     const resetButton = root.querySelector('.filter-reset');
     const selections = { year: 'all', topic: 'all', venue: 'all' };
-    if (!publicationRows.length || !yearOptions || !venueOptions || !resetButton) return;
+    if (!publicationRows.length || !yearOptions || !topicOptions || !venueOptions || !resetButton) return;
 
     function getRowTags(row) {
       return (row.dataset.tags || '')
@@ -87,16 +136,39 @@
       const details = publicationRows.map(getRowDetails);
       const years = [...new Set(details.map((item) => item.year).filter(Boolean))]
         .sort((a, b) => Number(b) - Number(a));
+      const topics = [...new Set(publicationRows.flatMap(getRowTags))]
+        .sort((a, b) => a.localeCompare(b));
       const venues = [...new Set(details.map((item) => item.venue).filter(Boolean))]
         .sort((a, b) => a.localeCompare(b));
 
       yearOptions.appendChild(makeOption('all', 'All'));
       years.forEach((year) => yearOptions.appendChild(makeOption(year, year)));
+      topicOptions.appendChild(makeOption('all', 'All'));
+      topics.forEach((topic) => topicOptions.appendChild(makeOption(topic, topic)));
       venueOptions.appendChild(makeOption('all', 'All'));
       venues.forEach((venue) => venueOptions.appendChild(makeOption(venue, venue)));
 
       root.querySelectorAll('.filter-option').forEach((option) => {
         if (!option.dataset.label) option.dataset.label = option.textContent.trim();
+      });
+    }
+
+    function buildPaperTags() {
+      publicationRows.forEach((row) => {
+        const infoCell = row.querySelector('.paper-info-cell');
+        if (!infoCell) return;
+
+        const container = document.createElement('div');
+        container.className = 'paper-tags';
+        getRowTags(row).forEach((tag) => {
+          const button = document.createElement('button');
+          button.className = 'paper-tag';
+          button.type = 'button';
+          button.dataset.filter = tag;
+          button.textContent = tag;
+          container.appendChild(button);
+        });
+        infoCell.appendChild(container);
       });
     }
 
@@ -180,6 +252,8 @@
       filterMenus.forEach((menu) => { menu.open = false; });
       applyFilters();
     });
+
+    buildPaperTags();
 
     root.querySelectorAll('.paper-tag').forEach((tag) => {
       tag.addEventListener('click', function () {

@@ -13,6 +13,10 @@ document.getElementById("timeline-component").innerHTML = `
         <button class="timeline-filter" type="button" data-category="career"><i class="legend-symbol career" aria-hidden="true">●</i> Career &amp; education</button>
         <button class="timeline-filter" type="button" data-category="award"><i class="legend-symbol award" aria-hidden="true">★</i> Awards &amp; scholarships</button>
         <button class="timeline-filter" type="button" data-category="event"><i class="legend-symbol event" aria-hidden="true">◆</i> Conferences, talks &amp; events</button>
+        <button class="timeline-view-toggle" type="button" aria-pressed="false">
+          <span class="timeline-view-icon" aria-hidden="true">🌍</span>
+          <span class="timeline-view-label">Globe view</span>
+        </button>
       </div>
 
       <ol class="timeline-list">
@@ -22,12 +26,8 @@ document.getElementById("timeline-component").innerHTML = `
           <div>
             <div class="timeline-event-heading">
               <strong>ECCV 2026 · Malmö, Sweden</strong>
-              <span class="separator">·</span>
-              <a href="https://eccv.ecva.net/Conferences/2026" target="_blank" rel="noopener">Conference website</a>
-              <span class="separator">·</span>
-              <a href="https://terrabytes-workshop.github.io" target="_blank" rel="noopener">Workshop website</a>
             </div>
-            <p>Two articles presented at the TerraBytes workshop</p>
+            <p>Two articles presented · <a href="https://eccv.ecva.net/Conferences/2026" target="_blank" rel="noopener">Conference</a> · <a href="https://terrabytes-workshop.github.io" target="_blank" rel="noopener">TerraBytes Workshop</a></p>
           </div>
         </li>
         <li class="timeline-item award">
@@ -35,15 +35,15 @@ document.getElementById("timeline-component").innerHTML = `
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
             <strong>ISPRS 2026 Best Young Author Award co-author</strong>
-            <p>“Diachronic Stereo Matching...” · ISPRS 2026 · Toronto, Canada · <a href="https://www.isprs2026toronto.com/" target="_blank" rel="noopener">Conference website</a></p>
+            <p>“Diachronic Stereo Matching...” · Toronto, Canada · <a href="https://www.isprs2026toronto.com/" target="_blank" rel="noopener">Conference</a></p>
           </div>
         </li>
         <li class="timeline-item event">
           <time datetime="2026-04">Apr. 2026</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
-            <strong>PHASE-IV-AI final plenary meeting · Turku, Finland</strong>
-            <p>Horizon Europe project · <a href="https://www.phase4ai-project.eu/" target="_blank" rel="noopener">Project website</a></p>
+            <strong>PHASE-IV-AI plenary meeting · Turku, Finland</strong>
+            <p>Horizon Europe project · <a href="https://www.phase4ai-project.eu/?p=2567" target="_blank" rel="noopener">Press</a></p>
           </div>
         </li>
         <li class="timeline-item award">
@@ -51,7 +51,7 @@ document.getElementById("timeline-component").innerHTML = `
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
             <strong>3D-ARCH 2026 Best Paper Award co-author</strong>
-            <p>“ShinyNeRF” · 3D-ARCH 2026 · Ancona, Italy · <a href="https://3darch.fbk.eu/home" target="_blank" rel="noopener">Workshop website</a></p>
+            <p>“ShinyNeRF” · Ancona, Italy · <a href="https://3darch.fbk.eu/home" target="_blank" rel="noopener">3D-ARCH Workshop</a></p>
           </div>
         </li>
         <li class="timeline-item career">
@@ -68,10 +68,16 @@ document.getElementById("timeline-component").innerHTML = `
           <div>
             <div class="timeline-event-heading">
               <strong>DLBCN 2025 · Barcelona</strong>
-              <span class="separator">·</span>
-              <a href="https://sites.google.com/view/dlbcn2025/home" target="_blank" rel="noopener">Event website</a>
             </div>
-          <p>Deep Learning Barcelona Symposium · Barcelona</p>
+          <p>Deep Learning Barcelona Symposium · Barcelona · <a href="https://sites.google.com/view/dlbcn2025/home" target="_blank" rel="noopener">Website</a></p>
+          </div>
+        </li>
+        <li class="timeline-item event">
+          <time datetime="2025-11">Nov. 2025</time>
+          <span class="timeline-marker" aria-hidden="true">◆</span>
+          <div>
+            <strong>PHASE-IV-AI plenary meeting · Porto, Portugal</strong>
+            <p>Horizon Europe project · <a href="https://www.phase4ai-project.eu/?p=2193" target="_blank" rel="noopener">Press</a></p>
           </div>
         </li>
         <li class="timeline-item event">
@@ -86,8 +92,8 @@ document.getElementById("timeline-component").innerHTML = `
           <time datetime="2024-11">Nov. 2024</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
-            <strong>Invited speaker at Erasmus Mundus Joint Master in Artificial Intelligence</strong>
-            <p>Giga/UNICEF–UPF event · Barcelona</p>
+            <strong>Invited speaker at EMAI</strong>
+            <p>Erasmus Mundus Joint Master in Artificial Intelligence · Barcelona · <a href="https://www.upf.edu/web/emai/home/-/asset_publisher/5sY4Fac9VVho/content/giga-visited-the-upf-campus/maximized" target="_blank" rel="noopener">Press</a></p>
           </div>
         </li>
         <li class="timeline-item event">
@@ -96,10 +102,8 @@ document.getElementById("timeline-component").innerHTML = `
           <div>
             <div class="timeline-event-heading">
               <strong>CCIA 2024 · Barcelona</strong>
-              <span class="separator">·</span>
-              <a href="https://acia.cat/congress-ccia/ccia-2024-edicio-26/" target="_blank" rel="noopener">Conference website</a>
               </div>
-            <p>International Congress of the Catalan Association for Artificial Intelligence · Barcelona </p>
+            <p>Presented "Characterization of Synthetic Lung..." · Barcelona · <a href="https://acia.cat/congress-ccia/ccia-2024-edicio-26/" target="_blank" rel="noopener">Conference</a></p>
           </div>
         </li>
         <li class="timeline-item career">
@@ -116,20 +120,16 @@ document.getElementById("timeline-component").innerHTML = `
           <div>
             <div class="timeline-event-heading">
               <strong>DLBCN 2023 · Barcelona</strong>
-              <span class="separator">·</span>
-              <a href="https://sites.google.com/view/dlbcn2023/home" target="_blank" rel="noopener">Event website</a>
             </div>
-             <p>Deep Learning Barcelona Symposium · Barcelona</p>
+             <p>Deep Learning Barcelona Symposium · Barcelona · <a href="https://sites.google.com/view/dlbcn2023/home" target="_blank" rel="noopener">Website</a></p>
             </div>
         </li>
         <li class="timeline-item event">
           <time datetime="2023-09">Sep. 2023</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
-            <strong>Invited speaker at the Satellite Image Deep Learning Podcast</strong>
-            <span class="separator">·</span>
-            <a href="https://www.youtube.com/watch?v=Bn_60DCzSfQ" target="_blank" rel="noopener">Video</a>
-            <p>Deep learning for 3D understanding of satellite images · Remote</p>
+            <strong>Invited speaker at Satellite Image Deep Learning Podcast</strong>
+            <p>Deep learning for 3D understanding of satellite images · Remote · <a href="https://www.youtube.com/watch?v=Bn_60DCzSfQ" target="_blank" rel="noopener">Video</a></p>
           </div>
         </li>
         <li class="timeline-item event">
@@ -138,12 +138,8 @@ document.getElementById("timeline-component").innerHTML = `
           <div>
             <div class="timeline-event-heading">
               <strong>CVPR 2023 · Vancouver, Canada</strong>
-              <span class="separator">·</span>
-              <a href="https://cvpr2023.thecvf.com/Conferences/2023" target="_blank" rel="noopener">Conference website</a>
-              <span class="separator">·</span>
-              <a href="https://www.grss-ieee.org/events/earthvision-2023/" target="_blank" rel="noopener">Workshop website</a>
             </div>
-            <p>Presented “EO-NeRF” at the EarthVision workshop</p>
+            <p>Presented “EO-NeRF” · <a href="https://cvpr2023.thecvf.com/Conferences/2023" target="_blank" rel="noopener">Conference</a> · <a href="https://www.grss-ieee.org/events/earthvision-2023/" target="_blank" rel="noopener">EarthVision Workshop</a></p>
           </div>
         </li>
         <li class="timeline-item career">
@@ -167,7 +163,7 @@ document.getElementById("timeline-component").innerHTML = `
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
             <strong>MLBriefs 2022 Best Student Paper Award</strong>
-            <p>“Disparity Estimation Networks…” · MLBriefs 2022 · Paris, France · <a href="https://mlbriefs.com/previous/mlbriefs2/" target="_blank" rel="noopener">Workshop website</a></p>
+            <p>“Disparity Estimation Networks…” · Paris, France · <a href="https://mlbriefs.com/previous/mlbriefs2/" target="_blank" rel="noopener">MLBriefs Workshop</a></p>
           </div>
         </li>
         <li class="timeline-item event">
@@ -176,12 +172,8 @@ document.getElementById("timeline-component").innerHTML = `
           <div>
             <div class="timeline-event-heading">
               <strong>CVPR 2022 · New Orleans, USA</strong>
-              <span class="separator">·</span>
-              <a href="https://cvpr2022.thecvf.com/" target="_blank" rel="noopener">Conference website</a>
-              <span class="separator">·</span>
-              <a href="https://www.grss-ieee.org/events/earthvision-2022/" target="_blank" rel="noopener">Workshop website</a>
             </div>
-            <p>Presented “Sat-NeRF” at the EarthVision workshop</p>
+            <p>Presented “Sat-NeRF” · <a href="https://cvpr2022.thecvf.com/" target="_blank" rel="noopener">Conference</a> · <a href="https://www.grss-ieee.org/events/earthvision-2022/" target="_blank" rel="noopener">EarthVision Workshop</a></p>
           </div>
         </li>
         <li class="timeline-item event">
@@ -190,10 +182,8 @@ document.getElementById("timeline-component").innerHTML = `
           <div>
             <div class="timeline-event-heading">
               <strong>ISPRS 2022 · Nice, France</strong>
-              <span class="separator">·</span>
-              <a href="https://www.isprs2022-nice.com/" target="_blank" rel="noopener">Conference website</a>
             </div>
-            <p>Presented “L1B+” at the ISPRS Congress</p>
+            <p>Presented “L1B+” · <a href="https://www.isprs2022-nice.com/" target="_blank" rel="noopener">Conference</a></p>
           </div>
         </li>
         <li class="timeline-item event">
@@ -201,11 +191,9 @@ document.getElementById("timeline-component").innerHTML = `
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
             <div class="timeline-event-heading">
-              <strong>IGARSS 2021 · Brussels, Belgium · Remote</strong>
-              <span class="separator">·</span>
-              <a href="https://www.igarss2021.com/" target="_blank" rel="noopener">Conference website</a>
+              <strong>IGARSS 2021 · Brussels, Belgium</strong>
             </div>
-            <p>Remote attendance · Two articles presented</p>
+            <p>Two articles presented · Remote · <a href="https://www.igarss2021.com/" target="_blank" rel="noopener">Conference</a></p>
           </div>
         </li>
         <li class="timeline-item event">
@@ -214,12 +202,8 @@ document.getElementById("timeline-component").innerHTML = `
           <div>
             <div class="timeline-event-heading">
               <strong>ICCV 2019 · Seoul, South Korea</strong>
-              <span class="separator">·</span>
-              <a href="https://iccv2019.thecvf.com/" target="_blank" rel="noopener">Conference website</a>
-              <span class="separator">·</span>
-              <a href="http://3drw2019.dgcv.nii.ac.jp/" target="_blank" rel="noopener">Workshop website</a>
             </div>
-            <p>Presented “To Bundle Adjust or Not” at the 3DRW workshop</p>
+            <p>Presented “To Bundle Adjust or Not” · <a href="https://iccv2019.thecvf.com/" target="_blank" rel="noopener">Conference</a> · <a href="http://3drw2019.dgcv.nii.ac.jp/" target="_blank" rel="noopener">3DRW Workshop</a></p>
           </div>
         </li>
         <li class="timeline-item award">
@@ -244,10 +228,8 @@ document.getElementById("timeline-component").innerHTML = `
           <div>
             <div class="timeline-event-heading">
               <strong>CVPR 2019 · Long Beach, USA</strong>
-              <span class="separator">·</span>
-              <a href="https://cvpr2019.thecvf.com/" target="_blank" rel="noopener">Conference website</a>
             </div>
-            <p>Presented “Deep Single Image Camera Calibration...” at the main conference</p>
+            <p>Presented “Deep Single Image Camera Calibration...” · <a href="https://cvpr2019.thecvf.com/" target="_blank" rel="noopener">Conference</a></p>
           </div>
         </li>
         <li class="timeline-item career">
@@ -283,6 +265,11 @@ document.getElementById("timeline-component").innerHTML = `
           </div>
         </li>
       </ol>
+
+      <div class="timeline-globe-view" hidden>
+        <p class="timeline-globe-intro">A geographic view of my research journey.</p>
+        <iframe class="timeline-globe-frame" data-src="research-globe.html?embed=1" title="Interactive research journey globe"></iframe>
+      </div>
     </div>
   </details>
 </section>
