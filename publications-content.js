@@ -29,12 +29,12 @@ document.getElementById("publications-component").innerHTML = `
 <! SeasonStereo, 2026 >
 <tr class="publication-row" data-tags="Earth Observation;3D Reconstruction;Stereovision;Generative AI" onmouseout="seasonstereo_stop()" onmouseover="seasonstereo_start()">
   <td class="paper-media-cell">
-    <a href="images/SeasonStereo_after.mp4">
+    <a href="images/2026_SeasonStereo_after.mp4">
       <div class="paper-media">
-        <img src="images/SeasonStereo_before.png" alt="SeasonStereo before">
+        <img src="images/2026_SeasonStereo_before.png" alt="SeasonStereo before">
         <div class="two" id="seasonstereo_image">
           <video muted autoplay loop playsinline>
-            <source src="images/SeasonStereo_after.mp4" type="video/mp4">
+            <source src="images/2026_SeasonStereo_after.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -54,7 +54,7 @@ document.getElementById("publications-component").innerHTML = `
     /
     <a href="https://github.com/multimedia-eurecat/SeasonStereo">code</a>
     /
-    <a href="data/SeasonStereo_poster.pdf">poster</a>
+    <a href="data/2026_SeasonStereo_poster.pdf">poster</a>
     <p></p>
     <p style="margin-bottom: 0;">
       SeasonStereo enables dense stereo matching for multi-date satellite images with reduced supervision cost. We use generative AI to synthesize geometry-consistent seasonal training pairs, avoiding the need for real multi-date training data and LiDAR-based supervision.
@@ -66,9 +66,9 @@ document.getElementById("publications-component").innerHTML = `
 <! Sat-bundleadjust v2, 2026 >
 <tr class="publication-row" data-tags="Earth Observation;Camera Calibration;Stereovision;3D Reconstruction">
   <td class="paper-media-cell">
-    <a href="images/SAT-BAv2_teaser.png">
+    <a href="images/2026_SAT-BAv2_teaser.png">
       <div class="paper-media">
-        <img src="images/SAT-BAv2_teaser.png" alt="SAT-BA v2 teaser">
+        <img src="images/2026_SAT-BAv2_teaser.png" alt="SAT-BA v2 teaser">
       </div>
     </a>
   </td>
@@ -85,7 +85,7 @@ document.getElementById("publications-component").innerHTML = `
     /
     <a href="https://github.com/centreborelli/sat-bundleadjust">code</a>
     /
-    <a href="data/SATBAv2_poster.pdf">poster</a>
+    <a href="data/2026_SATBAv2_poster.pdf">poster</a>
     <p></p>
     <p style="margin-bottom: 0;">
       Sat-bundleadjust v2. We use season-invariant correspondences and similarity-based image-pair selection to refine RPC camera models of multi-date satellite images, reducing erroneous matches and computational cost while improving geometric accuracy.
@@ -97,9 +97,9 @@ document.getElementById("publications-component").innerHTML = `
 <! Classwise Multimodal ERC, 2026 >
 <tr class="publication-row" data-tags="Affective Computing; Generative AI">
   <td class="paper-media-cell">
-    <a href="images/ClasswiseMultimodalERC_teaser.png">
+    <a href="images/2026_ClasswiseMultimodalERC_teaser.png">
       <div class="paper-media">
-        <img src="images/ClasswiseMultimodalERC_teaser.png" alt="ClasswiseMultimodalERC teaser">
+        <img src="images/2026_ClasswiseMultimodalERC_teaser.png" alt="ClasswiseMultimodalERC teaser">
       </div>
     </a>
   </td>
@@ -111,6 +111,8 @@ document.getElementById("publications-component").innerHTML = `
     <em>ECCV Workshops</em>, 2026
     <br>
     <a href="https://github.com/multimedia-eurecat/classwise-multimodal-ERC">code</a>
+    /
+    <a href="data/2026_MultimodalERC_poster.pdf">poster</a>
     <p></p>
     <p style="margin-bottom: 0;">
       We extend the Self-Distillation Transformer architecture for ERC with a class-wise adaptive modality fusion step, a valence-arousal prior for affective transitions and other updates.
@@ -123,9 +125,9 @@ document.getElementById("publications-component").innerHTML = `
 <! Diachronic Stereo Matching, 2026 >
 <tr class="publication-row" data-tags="Earth Observation;3D Reconstruction;Stereovision;Awards">
   <td class="paper-media-cell">
-    <a href="images/DiachronicStereo_teaser.png">
+    <a href="images/2026_DiachronicStereo_teaser.png">
       <div class="paper-media">
-        <img src="images/DiachronicStereo_teaser.png" alt="Diachronic Stereo Matching teaser">
+        <img src="images/2026_DiachronicStereo_teaser.png" alt="Diachronic Stereo Matching teaser">
       </div>
     </a>
   </td>
@@ -159,12 +161,12 @@ document.getElementById("publications-component").innerHTML = `
 <! LAND, 2026 >
 <tr class="publication-row" data-tags="Generative AI;Medical Imaging" onmouseout="land_stop()" onmouseover="land_start()">
   <td class="paper-media-cell">
-    <a href="images/LAND_after.mp4">
+    <a href="images/2026_LAND_after.mp4">
       <div class="paper-media">
-        <img src="images/LAND_before.png" alt="LAND teaser">
+        <img src="images/2026_LAND_before.png" alt="LAND teaser">
         <div class="two" id="land_image">
           <video muted autoplay loop playsinline>
-            <source src="images/LAND_after.mp4" type="video/mp4">
+            <source src="images/2026_LAND_after.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -195,9 +197,9 @@ document.getElementById("publications-component").innerHTML = `
 <! MExECON, 2026 >
 <tr class="publication-row" data-tags="3D Reconstruction; Human Avatars">
   <td class="paper-media-cell">
-    <a href="images/MExECON_teaser.png">
+    <a href="images/2026_MExECON_teaser.png">
       <div class="paper-media">
-        <img src="images/MExECON_teaser.png" alt="MExECON teaser">
+        <img src="images/2026_MExECON_teaser.png" alt="MExECON teaser">
       </div>
     </a>
   </td>
@@ -225,12 +227,12 @@ document.getElementById("publications-component").innerHTML = `
 <! ShinyNeRF, 2026 >
 <tr class="publication-row" data-tags="3D Reconstruction;Neural Rendering;Awards" onmouseout="shinynerf_stop()" onmouseover="shinynerf_start()">
   <td class="paper-media-cell">
-    <a href="images/ShinyNeRF_after.mp4">
+    <a href="images/2026_ShinyNeRF_after.mp4">
       <div class="paper-media">
-        <img src="images/ShinyNeRF_before.png" alt="ShinyNeRF teaser">
+        <img src="images/2026_ShinyNeRF_before.png" alt="ShinyNeRF teaser">
         <div class="two" id="shinynerf_image">
           <video muted autoplay loop playsinline>
-            <source src="images/ShinyNeRF_after.mp4" type="video/mp4">
+            <source src="images/2026_ShinyNeRF_after.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -264,9 +266,9 @@ document.getElementById("publications-component").innerHTML = `
 <! S-EO Dataset: Geometry-Aware Shadow Detection, 2025 >
 <tr class="publication-row" data-tags="Earth Observation;3D Reconstruction;Neural Rendering">
   <td class="paper-media-cell">
-    <a href="images/ShadowDataset_teaser.png">
+    <a href="images/2025_ShadowDataset_teaser.png">
       <div class="paper-media">
-        <img src="images/ShadowDataset_teaser.png" alt="S-EO dataset teaser">
+        <img src="images/2025_ShadowDataset_teaser.png" alt="S-EO dataset teaser">
       </div>
     </a>
   </td>
@@ -294,11 +296,11 @@ document.getElementById("publications-component").innerHTML = `
 <! Latent Diffusion for Conditional Generation of Aerial Imagery, 2025 >
 <tr class="publication-row" data-tags="Generative AI;Earth Observation" onmouseout="mapsLDM_stop()" onmouseover="mapsLDM_start()">
   <td class="paper-media-cell">
-    <a href="images/mapsLDM_teaser.png">
+    <a href="images/2025_mapsLDM_teaser.png">
       <div class="paper-media">
-        <img src="images/mapsLDM_real.png" alt="MapsLDM real aerial image">
+        <img src="images/2025_mapsLDM_real.png" alt="MapsLDM real aerial image">
         <div class="two" id="mapsLDM_image">
-          <img src="images/mapsLDM_synthetic.png" alt="MapsLDM synthetic aerial image">
+          <img src="images/2025_mapsLDM_synthetic.png" alt="MapsLDM synthetic aerial image">
         </div>
       </div>
     </a>
@@ -328,9 +330,9 @@ document.getElementById("publications-component").innerHTML = `
 <! Specularity in NeRFs: A Comparative Study of Ref-NeRF and NRFF, 2025 >
 <tr class="publication-row" data-tags="3D Reconstruction;Neural Rendering">
   <td class="paper-media-cell">
-    <a href="images/SpecularityNeRFs_teaser.png">
+    <a href="images/2025_SpecularityNeRFs_teaser.png">
       <div class="paper-media">
-        <img src="images/SpecularityNeRFs_teaser.png" alt="Specularity in NeRFs review teaser">
+        <img src="images/2025_SpecularityNeRFs_teaser.png" alt="Specularity in NeRFs review teaser">
       </div>
     </a>
   </td>
@@ -357,11 +359,11 @@ document.getElementById("publications-component").innerHTML = `
 <! Characterization of Synthetic Lung Nodules in Conditional Latent Diffusion of Chest CT Scans, 2024 >
 <tr class="publication-row" data-tags="Generative AI; Medical Imaging" onmouseout="chestCT2D_stop()" onmouseover="chestCT2D_start()">
   <td class="paper-media-cell">
-    <a href="images/LDM_chestCT2d_teaser.png">
+    <a href="images/2024_LDM_chestCT2d_teaser.png">
       <div class="paper-media">
-        <img src="images/LDM_chestCT2d_1.png" alt="Chest CT synthetic 2D image">
+        <img src="images/2024_LDM_chestCT2d_1.png" alt="Chest CT synthetic 2D image">
         <div class="two" id="chestCT2D_image">
-          <img src="images/LDM_chestCT2d_2.png" alt="Chest CT synthetic 2D image">
+          <img src="images/2024_LDM_chestCT2d_2.png" alt="Chest CT synthetic 2D image">
         </div>
       </div>
     </a>
@@ -391,9 +393,9 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! VaxNeRF Review, 2024 >
 <tr class="publication-row" data-tags="3D Reconstruction;Neural Rendering">
   <td class="paper-media-cell">
-    <a href="images/VaxNeRF_teaser.png">
+    <a href="images/2024_VaxNeRF_teaser.png">
       <div class="paper-media">
-        <img src="images/VaxNeRF_teaser.png" alt="VaxNeRF review teaser">
+        <img src="images/2024_VaxNeRF_teaser.png" alt="VaxNeRF review teaser">
       </div>
     </a>
   </td>
@@ -419,9 +421,9 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! Radar Fields, 2024 >
 <tr class="publication-row" data-tags="Earth Observation;3D Reconstruction;Neural Rendering">
   <td class="paper-media-cell">
-    <a href="images/RadarFields_full.png">
+    <a href="images/2024_RadarFields_full.png">
       <div class="paper-media">
-        <img src="images/RadarFields_teaser.png" alt="Radar Fields teaser">
+        <img src="images/2024_RadarFields_teaser.png" alt="Radar Fields teaser">
       </div>
     </a>
   </td>
@@ -433,6 +435,8 @@ We analyze how well the model controls lung nodule placement and characteristics
     <em>CVPR Workshops</em>, 2024
     <br>
     <a href="https://openaccess.thecvf.com/content/CVPR2024W/EarthVision/papers/Ehret_Radar_Fields_An_Extension_of_Radiance_Fields_to_SAR_CVPRW_2024_paper.pdf">paper</a>
+    /
+    <a href="data/2024_RadarFields_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.1109/CVPRW63382.2024.00061">doi: 10.1109/CVPRW63382.2024.00061</a>
     <p></p>
@@ -446,9 +450,9 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! Pansharpening NeRF, 2024 >
 <tr class="publication-row" data-tags="Earth Observation;Neural Rendering;3D Reconstruction">
   <td class="paper-media-cell">
-    <a href="images/pansharpenNeRF_teaser.png">
+    <a href="images/2024_pansharpenNeRF_teaser.png">
       <div class="paper-media">
-        <img src="images/pansharpenNeRF_teaser.png" alt="Pseudo Pansharpening NeRF teaser">
+        <img src="images/2024_pansharpenNeRF_teaser.png" alt="Pseudo Pansharpening NeRF teaser">
       </div>
     </a>
   </td>
@@ -472,11 +476,11 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! DiffNeRF, 2024 >
 <tr class="publication-row" data-tags="Neural Rendering;3D Reconstruction" onmouseout="diffnerf_stop()" onmouseover="diffnerf_start()">
   <td class="paper-media-cell">
-    <a href="images/diffnerf_teaser.png">
+    <a href="images/2024_diffnerf_teaser.png">
       <div class="paper-media">
-        <img src="images/diffnerf_before.png" alt="DiffNeRF before">
+        <img src="images/2024_diffnerf_before.png" alt="DiffNeRF before">
         <div class="two" id="diffnerf_image">
-          <img src="images/diffnerf_after.png" alt="DiffNeRF after">
+          <img src="images/2024_diffnerf_after.png" alt="DiffNeRF after">
         </div>
       </div>
     </a>
@@ -492,7 +496,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     /
     <a href="https://github.com/tehret/diffnerf">code</a>
     /
-    <a href="data/DiffNeRF_poster.pdf">poster</a>
+    <a href="data/2024_DiffNeRF_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.1109/WACV57701.2024.00306">doi: 10.1109/WACV57701.2024.00306</a>
     <p></p>
@@ -506,12 +510,12 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! EO-NeRF, 2023 >
 <tr class="publication-row" data-tags="Earth Observation;3D Reconstruction;Neural Rendering" onmouseout="eonerf_stop()" onmouseover="eonerf_start()">
   <td class="paper-media-cell">
-    <a href="images/EONeRF_after.mp4">
+    <a href="images/2023_EONeRF_after.mp4">
       <div class="paper-media">
-        <img src="images/EONeRF_before.png" alt="EO-NeRF before">
+        <img src="images/2023_EONeRF_before.png" alt="EO-NeRF before">
         <div class="two" id="eonerf_image">
           <video muted autoplay loop playsinline>
-            <source src="images/EONeRF_after.mp4" type="video/mp4">
+            <source src="images/2023_EONeRF_after.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -531,7 +535,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     /
     <a href="https://github.com/rogermm14/eonerf_code">code</a>
     /
-    <a href="data/EONeRF_poster.pdf">poster</a>
+    <a href="data/2023_EONeRF_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.1109/CVPRW59228.2023.00197">doi: 10.1109/CVPRW59228.2023.00197</a>
     <p></p>
@@ -546,7 +550,7 @@ We analyze how well the model controls lung nodule placement and characteristics
   <td class="paper-media-cell">
     <a href="https://hal.science/tel-04143750/">
       <div class="paper-media">
-        <img src="images/PhDThesis_teaser.png" alt="PhD thesis teaser">
+        <img src="images/2022_PhDThesis_teaser.png" alt="PhD thesis teaser">
       </div>
     </a>
   </td>
@@ -571,9 +575,9 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! Disparity Estimation Networks for Remote Sensing, 2022 >
 <tr class="publication-row" data-tags="Earth Observation;Stereovision;3D Reconstruction;Awards">
   <td class="paper-media-cell">
-    <a href="images/Disparity2022_teaser.png">
+    <a href="images/2022_DisparityNets_teaser.png">
       <div class="paper-media">
-        <img src="images/Disparity2022_teaser.png" alt="Disparity estimation teaser">
+        <img src="images/2022_DisparityNets_teaser.png" alt="Disparity estimation teaser">
       </div>
     </a>
   </td>
@@ -607,9 +611,9 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! SatNeRF, 2022 >
 <tr class="publication-row" data-tags="Earth Observation;3D Reconstruction;Neural Rendering">
   <td class="paper-media-cell">
-    <a href="images/SatNeRF_teaser2.png">
+    <a href="images/2022_SatNeRF_teaser2.png">
       <div class="paper-media">
-        <img src="images/SatNeRF_teaser2.png" alt="Sat-NeRF teaser">
+        <img src="images/2022_SatNeRF_teaser2.png" alt="Sat-NeRF teaser">
       </div>
     </a>
   </td>
@@ -626,7 +630,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     /
     <a href="https://github.com/centreborelli/satnerf">code</a>
     /
-    <a href="data/SatNeRF_poster.pdf">poster</a>
+    <a href="data/2022_SatNeRF_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.1109/CVPRW56347.2022.00137">doi: 10.1109/CVPRW56347.2022.00137</a>
     <p></p>
@@ -639,11 +643,11 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! L1B+, 2022 >
 <tr class="publication-row" data-tags="Earth Observation;Camera Calibration;Stereovision;3D Reconstruction" onmouseout="l1bplus_stop()" onmouseover="l1bplus_start()">
   <td class="paper-media-cell">
-    <a href="images/L1B+_teaser.png">
+    <a href="images/2022_L1B+_teaser.png">
       <div class="paper-media">
-        <img src="images/L1B+_before.png" alt="L1B+ before">
+        <img src="images/2022_L1B+_before.png" alt="L1B+ before">
         <div class="two" id="l1bplus_image">
-          <img src="images/L1B+_after.png" alt="L1B+ after">
+          <img src="images/2022_L1B+_after.png" alt="L1B+ after">
         </div>
       </div>
     </a>
@@ -657,7 +661,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     <br>
     <a href="https://isprs-annals.copernicus.org/articles/V-1-2022/137/2022/isprs-annals-V-1-2022-137-2022.pdf">paper</a>
     /
-    <a href="data/L1B+_poster.pdf">poster</a>
+    <a href="data/2022_L1B+_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.5194/isprs-annals-V-1-2022-137-2022">doi: 10.5194/isprs-annals-V-1-2022-137-2022</a>
     <p></p>
@@ -670,9 +674,9 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! Bundle Adjustment for RPCs, 2021 >
 <tr class="publication-row" data-tags="Earth Observation;Camera Calibration;Stereovision;3D Reconstruction">
   <td class="paper-media-cell">
-    <a href="images/BAipol_teaser.png">
+    <a href="images/2021_BAipol_teaser.png">
       <div class="paper-media">
-        <img src="images/BAipol_teaser.png" alt="Bundle Adjustment RPC refinement teaser">
+        <img src="images/2021_BAipol_teaser.png" alt="Bundle Adjustment RPC refinement teaser">
       </div>
     </a>
   </td>
@@ -702,12 +706,12 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! Stockpile Volume Estimation from SkySat Time Series, 2021 >
 <tr class="publication-row" data-tags="Earth Observation;Camera Calibration;Stereovision;3D Reconstruction" onmouseout="stockpile_stop()" onmouseover="stockpile_start()">
   <td class="paper-media-cell">
-    <a href="images/stockpile_before.png">
+    <a href="images/2021_stockpile_before.png">
       <div class="paper-media">
-        <img src="images/stockpile_before.png" alt="Stockpile before">
+        <img src="images/2021_stockpile_before.png" alt="Stockpile before">
         <div class="two" id="stockpile_image">
           <video muted autoplay loop playsinline>
-            <source src="images/stockpile_after.mp4" type="video/mp4">
+            <source src="images/2021_stockpile_after.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -735,9 +739,9 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! Robust Rational Polynomial Camera Modelling, 2021 >
 <tr class="publication-row" data-tags="Earth Observation;Camera Calibration">
   <td class="paper-media-cell">
-    <a href="images/rpcfit_teaser.png">
+    <a href="images/2021_rpcfit_teaser.png">
       <div class="paper-media">
-        <img src="images/rpcfit_teaser.png" alt="RPC fitting teaser">
+        <img src="images/2021_rpcfit_teaser.png" alt="RPC fitting teaser">
       </div>
     </a>
   </td>
@@ -763,9 +767,9 @@ We analyze how well the model controls lung nodule placement and characteristics
 <! To Bundle Adjust or Not, 2019 >
 <tr class="publication-row" data-tags="Earth Observation;Camera Calibration;Stereovision;3D Reconstruction">
   <td class="paper-media-cell">
-    <a href="images/ToBAorNot_teaser.png">
+    <a href="images/2019_ToBAorNot_teaser.png">
       <div class="paper-media">
-        <img src="images/ToBAorNot_teaser.png" alt="Bundle adjustment comparison teaser">
+        <img src="images/2019_ToBAorNot_teaser.png" alt="Bundle adjustment comparison teaser">
       </div>
     </a>
   </td>
@@ -780,7 +784,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     /
     <a href="https://openaccess.thecvf.com/content_ICCVW_2019/papers/3DRW/Mari_To_Bundle_Adjust_or_Not_A_Comparison_of_Relative_Geolocation_ICCVW_2019_paper.pdf">paper</a>
     /
-    <a href="data/ToBAorNot_poster.pdf">poster</a>
+    <a href="data/2019_ToBAorNot_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.1109/ICCVW.2019.00274">doi: 10.1109/ICCVW.2019.00274</a>
     <p></p>
@@ -792,11 +796,11 @@ We analyze how well the model controls lung nodule placement and characteristics
 
 <tr class="publication-row" data-tags="Camera Calibration" onmouseout="radial_stop()" onmouseover="radial_start()">
   <td class="paper-media-cell">
-    <a href="images/radial_teaser.png">
+    <a href="images/2019_radial_teaser.png">
       <div class="paper-media">
-        <img src="images/radial_before.png" alt="Radial calibration before">
+        <img src="images/2019_radial_before.png" alt="Radial calibration before">
         <div class="two" id="radial_image">
-          <img src="images/radial_after.png" alt="Radial calibration after">
+          <img src="images/2019_radial_after.png" alt="Radial calibration after">
         </div>
       </div>
     </a>
