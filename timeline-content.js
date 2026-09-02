@@ -27,7 +27,7 @@ document.getElementById("timeline-component").innerHTML = `
             <div class="timeline-event-heading">
               <strong>ECCV 2026 · Malmö, Sweden</strong>
             </div>
-            <p>Two articles presented · <a href="https://eccv.ecva.net/Conferences/2026" target="_blank" rel="noopener">Conference</a> · <a href="https://terrabytes-workshop.github.io" target="_blank" rel="noopener">TerraBytes Workshop</a></p>
+            <p>Three articles presented · <a href="https://eccv.ecva.net/Conferences/2026" target="_blank" rel="noopener">Conference</a> · <a href="https://terrabytes-workshop.github.io" target="_blank" rel="noopener">TerraBytes Workshop</a> · <a href="https://affective-behavior-analysis-in-the-wild.github.io/11th/" target="_blank" rel="noopener">ABAW Workshop</a></p>
           </div>
         </li>
         <li class="timeline-item award">

@@ -53,6 +53,8 @@ document.getElementById("publications-component").innerHTML = `
     <a href="https://arxiv.org/abs/2607.27139">paper</a>
     /
     <a href="https://github.com/multimedia-eurecat/SeasonStereo">code</a>
+    /
+    <a href="data/SeasonStereo_poster.pdf">poster</a>
     <p></p>
     <p style="margin-bottom: 0;">
       SeasonStereo enables dense stereo matching for multi-date satellite images with reduced supervision cost. We use generative AI to synthesize geometry-consistent seasonal training pairs, avoiding the need for real multi-date training data and LiDAR-based supervision.
@@ -82,6 +84,8 @@ document.getElementById("publications-component").innerHTML = `
     <a href="https://arxiv.org/abs/2607.26973">paper</a>
     /
     <a href="https://github.com/centreborelli/sat-bundleadjust">code</a>
+    /
+    <a href="data/SATBAv2_poster.pdf">poster</a>
     <p></p>
     <p style="margin-bottom: 0;">
       Sat-bundleadjust v2. We use season-invariant correspondences and similarity-based image-pair selection to refine RPC camera models of multi-date satellite images, reducing erroneous matches and computational cost while improving geometric accuracy.
@@ -89,6 +93,32 @@ document.getElementById("publications-component").innerHTML = `
 
   </td>
 </tr>
+
+<! Classwise Multimodal ERC, 2026 >
+<tr class="publication-row" data-tags="Affective Computing; Generative AI">
+  <td class="paper-media-cell">
+    <a href="images/ClasswiseMultimodalERC_teaser.png">
+      <div class="paper-media">
+        <img src="images/ClasswiseMultimodalERC_teaser.png" alt="ClasswiseMultimodalERC teaser">
+      </div>
+    </a>
+  </td>
+  <td class="paper-info-cell">
+    <papertitle>Multimodal Emotion Recognition in Conversations via Class-Wise Adaptive Modality Fusion and Affective Geometry</papertitle>
+    <br>
+    Oriol Marín, <strong>Roger Marí</strong>, Gloria Haro, Rafael Redondo
+    <br>
+    <em>ECCV Workshops</em>, 2026
+    <br>
+    <a href="https://github.com/multimedia-eurecat/classwise-multimodal-ERC">code</a>
+    <p></p>
+    <p style="margin-bottom: 0;">
+      We extend the Self-Distillation Transformer architecture for ERC with visual features combining facial appearance and geometry, a class-wise adaptive modality fusion step, and a valence-arousal prior for affective transitions.
+    </p>
+
+  </td>
+</tr>
+
 
 <! Diachronic Stereo Matching, 2026 >
 <tr class="publication-row" data-tags="Earth Observation;3D Reconstruction;Stereovision;Awards">
@@ -163,7 +193,7 @@ document.getElementById("publications-component").innerHTML = `
 </tr>
 
 <! MExECON, 2026 >
-<tr class="publication-row" data-tags="3D Reconstruction">
+<tr class="publication-row" data-tags="3D Reconstruction; Human Avatars">
   <td class="paper-media-cell">
     <a href="images/MExECON_teaser.png">
       <div class="paper-media">
