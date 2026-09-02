@@ -113,7 +113,7 @@ document.getElementById("publications-component").innerHTML = `
     <a href="https://github.com/multimedia-eurecat/classwise-multimodal-ERC">code</a>
     <p></p>
     <p style="margin-bottom: 0;">
-      We extend the Self-Distillation Transformer architecture for ERC with visual features combining facial appearance and geometry, a class-wise adaptive modality fusion step, and a valence-arousal prior for affective transitions.
+      We extend the Self-Distillation Transformer architecture for ERC with a class-wise adaptive modality fusion step, a valence-arousal prior for affective transitions and other updates.
     </p>
 
   </td>
@@ -464,7 +464,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     <a href="https://doi.org/10.1109/IGARSS53475.2024.10641439">doi: 10.1109/IGARSS53475.2024.10641439</a>
     <p></p>
     <p>
-      EO-NeRF is extended to handle high-res panchromatic (PAN) and low-res multispectral (MS) inputs, eliminating the need for separate pansharpening. The resulting model can render pansharpened image surrogates with high-res color information for each input viewpoint.
+      EO-NeRF is extended to handle high-res panchromatic (PAN) and low-res multispectral (MS) inputs, removing the need for separate pansharpening. The resulting model can render pansharpened image surrogates with high-res color information for each input viewpoint.
     </p>
   </td>
 </tr>
