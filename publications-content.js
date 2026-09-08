@@ -110,6 +110,8 @@ document.getElementById("publications-component").innerHTML = `
     <br>
     <em>ECCV Workshops</em>, 2026
     <br>
+    <a href="https://openreview.net/pdf?id=W9nHetvu5v">paper</a>
+    /
     <a href="https://github.com/multimedia-eurecat/classwise-multimodal-ERC">code</a>
     /
     <a href="data/2026_MultimodalERC_poster.pdf">poster</a>
