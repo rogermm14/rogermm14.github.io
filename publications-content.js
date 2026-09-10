@@ -50,7 +50,7 @@ document.getElementById("publications-component").innerHTML = `
     <br>
     <a href="https://multimedia-eurecat.github.io/SeasonStereo">project page</a>
     /
-    <a href="https://arxiv.org/abs/2607.27139">paper</a>
+    <a href="https://arxiv.org/pdf/2607.27139">paper</a>
     /
     <a href="https://github.com/multimedia-eurecat/SeasonStereo">code</a>
     /
@@ -81,7 +81,7 @@ document.getElementById("publications-component").innerHTML = `
     <br>
     <a href="https://centreborelli.github.io/sat-bundleadjust/v2/">project page</a>
     /
-    <a href="https://arxiv.org/abs/2607.26973">paper</a>
+    <a href="https://arxiv.org/pdf/2607.26973">paper</a>
     /
     <a href="https://github.com/centreborelli/sat-bundleadjust">code</a>
     /
@@ -110,7 +110,7 @@ document.getElementById("publications-component").innerHTML = `
     <br>
     <em>ECCV Workshops</em>, 2026
     <br>
-    <a href="https://openreview.net/pdf?id=W9nHetvu5v">paper</a>
+    <a href="https://arxiv.org/pdf/2609.09924">paper</a>
     /
     <a href="https://github.com/multimedia-eurecat/classwise-multimodal-ERC">code</a>
     /
