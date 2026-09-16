@@ -20,6 +20,14 @@ document.getElementById("timeline-component").innerHTML = `
       </div>
 
       <ol class="timeline-list">
+        <li class="timeline-item award">
+          <time datetime="2026-09">Sep. 2026</time>
+          <span class="timeline-marker" aria-hidden="true">★</span>
+          <div>
+            <strong>TerraBytes ECCV 2026 Best Poster Award</strong>
+            <p>“Robust Satellite RPC Refinement...” · Malmö, Sweden · <a href="https://terrabytes-workshop.github.io" target="_blank" rel="noopener">TerraBytes Workshop</a></p>
+          </div>
+        </li>
         <li class="timeline-item event">
           <time datetime="2026-09">Sep. 2026</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
