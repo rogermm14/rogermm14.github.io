@@ -64,7 +64,7 @@ document.getElementById("publications-component").innerHTML = `
 </tr>
 
 <! Sat-bundleadjust v2, 2026 >
-<tr class="publication-row" data-tags="Earth Observation;Camera Calibration;Stereovision;3D Reconstruction">
+<tr class="publication-row" data-tags="Earth Observation;Camera Calibration;Stereovision;3D Reconstruction;Awards">
   <td class="paper-media-cell">
     <a href="images/2026_SAT-BAv2_teaser.png">
       <div class="paper-media">
@@ -89,6 +89,9 @@ document.getElementById("publications-component").innerHTML = `
     <p></p>
     <p style="margin-bottom: 0;">
       Sat-bundleadjust v2. We use season-invariant correspondences and similarity-based image-pair selection to refine RPC camera models of multi-date satellite images, reducing erroneous matches and computational cost while improving geometric accuracy.
+    </p>
+    <p style="margin-top: 0; font-weight: bold; color: purple;">
+    🏆 Best Poster Award - TerraBytes ECCV 2026 Workshop
     </p>
 
   </td>
