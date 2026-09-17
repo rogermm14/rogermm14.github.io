@@ -8,6 +8,10 @@
     const viewToggle = root.querySelector('.timeline-view-toggle');
     const viewIcon = root.querySelector('.timeline-view-icon');
     const viewLabel = root.querySelector('.timeline-view-label');
+    const logoDialog = root.querySelector('.timeline-logo-dialog');
+    const logoDialogImage = root.querySelector('.timeline-logo-dialog-image');
+    const logoDialogTitle = root.querySelector('#timeline-logo-title');
+    const logoDialogDate = root.querySelector('#timeline-logo-date');
     if (!items.length || !filters.length) return;
 
     let activeCategory = 'all';
@@ -44,6 +48,43 @@
     const latestDate = latestItem.querySelector('time').textContent.trim();
     root.querySelector('.timeline-summary-latest').textContent =
       'Latest: ' + latestTitle + ', ' + latestDate;
+
+    items.forEach((item) => {
+      const logoPath = item.dataset.logo;
+      if (!logoPath || !logoDialog) return;
+      const heading = item.querySelector('strong').textContent.trim();
+      const date = item.querySelector('time').textContent.trim();
+      const logoName = logoPath.split('/').pop().replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ');
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'timeline-entry-logo';
+      button.setAttribute('aria-label', 'View ' + logoName + ' logo');
+      button.setAttribute('aria-haspopup', 'dialog');
+      button.setAttribute('aria-controls', 'timeline-logo-dialog');
+      button.title = 'View ' + logoName + ' logo';
+      const image = document.createElement('img');
+      image.src = logoPath;
+      image.alt = '';
+      image.loading = 'lazy';
+      button.appendChild(image);
+      button.addEventListener('click', () => {
+        logoDialogTitle.textContent = heading;
+        logoDialogDate.textContent = date;
+        logoDialogImage.src = logoPath;
+        logoDialogImage.alt = logoName + ' logo';
+        logoDialog.showModal();
+      });
+      item.appendChild(button);
+    });
+
+    if (logoDialog) {
+      logoDialog.querySelector('.timeline-logo-dialog-close').addEventListener('click', () => logoDialog.close());
+      logoDialog.addEventListener('click', (event) => {
+        const bounds = logoDialog.getBoundingClientRect();
+        if (event.target === logoDialog && (event.clientX < bounds.left || event.clientX > bounds.right ||
+          event.clientY < bounds.top || event.clientY > bounds.bottom)) logoDialog.close();
+      });
+    }
 
     filters.forEach((filter) => {
       const category = filter.dataset.category;

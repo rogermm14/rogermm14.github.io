@@ -54,7 +54,7 @@ document.getElementById("publications-component").innerHTML = `
     /
     <a href="https://github.com/multimedia-eurecat/SeasonStereo">code</a>
     /
-    <a href="data/2026_SeasonStereo_poster.pdf">poster</a>
+    <a href="data/posters/2026_SeasonStereo_poster.pdf">poster</a>
     <p></p>
     <p style="margin-bottom: 0;">
       SeasonStereo enables dense stereo matching for multi-date satellite images with reduced supervision cost. We use generative AI to synthesize geometry-consistent seasonal training pairs, avoiding the need for real multi-date training data and LiDAR-based supervision.
@@ -85,7 +85,7 @@ document.getElementById("publications-component").innerHTML = `
     /
     <a href="https://github.com/centreborelli/sat-bundleadjust">code</a>
     /
-    <a href="data/2026_SATBAv2_poster.pdf">poster</a>
+    <a href="data/posters/2026_SATBAv2_poster.pdf">poster</a>
     <p></p>
     <p style="margin-bottom: 0;">
       Sat-bundleadjust v2. We use season-invariant correspondences and similarity-based image-pair selection to refine RPC camera models of multi-date satellite images, reducing erroneous matches and computational cost while improving geometric accuracy.
@@ -117,7 +117,7 @@ document.getElementById("publications-component").innerHTML = `
     /
     <a href="https://github.com/multimedia-eurecat/classwise-multimodal-ERC">code</a>
     /
-    <a href="data/2026_MultimodalERC_poster.pdf">poster</a>
+    <a href="data/posters/2026_MultimodalERC_poster.pdf">poster</a>
     <p></p>
     <p style="margin-bottom: 0;">
       We extend the Self-Distillation Transformer architecture for ERC with a class-wise adaptive modality fusion step, a valence-arousal prior for affective transitions and other updates.
@@ -441,7 +441,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     <br>
     <a href="https://openaccess.thecvf.com/content/CVPR2024W/EarthVision/papers/Ehret_Radar_Fields_An_Extension_of_Radiance_Fields_to_SAR_CVPRW_2024_paper.pdf">paper</a>
     /
-    <a href="data/2024_RadarFields_poster.pdf">poster</a>
+    <a href="data/posters/2024_RadarFields_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.1109/CVPRW63382.2024.00061">doi: 10.1109/CVPRW63382.2024.00061</a>
     <p></p>
@@ -501,7 +501,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     /
     <a href="https://github.com/tehret/diffnerf">code</a>
     /
-    <a href="data/2024_DiffNeRF_poster.pdf">poster</a>
+    <a href="data/posters/2024_DiffNeRF_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.1109/WACV57701.2024.00306">doi: 10.1109/WACV57701.2024.00306</a>
     <p></p>
@@ -540,7 +540,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     /
     <a href="https://github.com/rogermm14/eonerf_code">code</a>
     /
-    <a href="data/2023_EONeRF_poster.pdf">poster</a>
+    <a href="data/posters/2023_EONeRF_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.1109/CVPRW59228.2023.00197">doi: 10.1109/CVPRW59228.2023.00197</a>
     <p></p>
@@ -635,7 +635,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     /
     <a href="https://github.com/centreborelli/satnerf">code</a>
     /
-    <a href="data/2022_SatNeRF_poster.pdf">poster</a>
+    <a href="data/posters/2022_SatNeRF_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.1109/CVPRW56347.2022.00137">doi: 10.1109/CVPRW56347.2022.00137</a>
     <p></p>
@@ -666,7 +666,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     <br>
     <a href="https://isprs-annals.copernicus.org/articles/V-1-2022/137/2022/isprs-annals-V-1-2022-137-2022.pdf">paper</a>
     /
-    <a href="data/2022_L1B+_poster.pdf">poster</a>
+    <a href="data/posters/2022_L1B+_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.5194/isprs-annals-V-1-2022-137-2022">doi: 10.5194/isprs-annals-V-1-2022-137-2022</a>
     <p></p>
@@ -789,7 +789,7 @@ We analyze how well the model controls lung nodule placement and characteristics
     /
     <a href="https://openaccess.thecvf.com/content_ICCVW_2019/papers/3DRW/Mari_To_Bundle_Adjust_or_Not_A_Comparison_of_Relative_Geolocation_ICCVW_2019_paper.pdf">paper</a>
     /
-    <a href="data/2019_ToBAorNot_poster.pdf">poster</a>
+    <a href="data/posters/2019_ToBAorNot_poster.pdf">poster</a>
     /
     <a href="https://doi.org/10.1109/ICCVW.2019.00274">doi: 10.1109/ICCVW.2019.00274</a>
     <p></p>
