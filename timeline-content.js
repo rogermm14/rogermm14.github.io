@@ -28,7 +28,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>“Robust Satellite RPC Refinement...” · Malmö, Sweden · <a href="https://terrabytes-workshop.github.io" target="_blank" rel="noopener">TerraBytes Workshop</a></p>
           </div>
         </li>
-        <li class="timeline-item event" data-location="Malmö, Sweden" data-logo="data/logos/ECCV_2026.png" data-photo="data/photos/2026_09_ECCV.jpg">
+        <li class="timeline-item event" data-location="Malmö, Sweden" data-logo="data/logos/ECCV_2026.png">
           <time datetime="2026-09">Sep. 2026</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
@@ -140,7 +140,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Deep learning for 3D understanding of satellite images · Remote · <a href="https://www.youtube.com/watch?v=Bn_60DCzSfQ" target="_blank" rel="noopener">Video</a></p>
           </div>
         </li>
-        <li class="timeline-item event" data-location="Vancouver, Canada" data-logo="data/logos/CVPR_2023.png" data-photo="data/photos/2023_06_CVPR.jpg">
+        <li class="timeline-item event" data-location="Vancouver, Canada" data-logo="data/logos/CVPR_2023.png">
           <time datetime="2023-06">Jun. 2023</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
@@ -174,7 +174,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>“Disparity Estimation Networks…” · Paris, France · <a href="https://mlbriefs.com/previous/mlbriefs2/" target="_blank" rel="noopener">MLBriefs Workshop</a></p>
           </div>
         </li>
-        <li class="timeline-item event" data-location="New Orleans, USA" data-logo="data/logos/CVPR_2022.png" data-photo="data/photos/2022_06_CVPR.jpg">
+        <li class="timeline-item event" data-location="New Orleans, USA" data-logo="data/logos/CVPR_2022.png">
           <time datetime="2022-06">Jun. 2022</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
@@ -184,7 +184,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Presented “Sat-NeRF” · <a href="https://cvpr2022.thecvf.com/" target="_blank" rel="noopener">Conference</a> · <a href="https://www.grss-ieee.org/events/earthvision-2022/" target="_blank" rel="noopener">EarthVision Workshop</a></p>
           </div>
         </li>
-        <li class="timeline-item event" data-location="Nice, France" data-logo="data/logos/ISPRS_2022.png" data-photo="data/photos/2022_06_ISPRS.jpg">
+        <li class="timeline-item event" data-location="Nice, France" data-logo="data/logos/ISPRS_2022.png">
           <time datetime="2022-06">Jun. 2022</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
@@ -204,7 +204,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Two articles presented · Remote · <a href="https://www.igarss2021.com/" target="_blank" rel="noopener">Conference</a></p>
           </div>
         </li>
-        <li class="timeline-item event" data-location="Seoul, South Korea" data-logo="data/logos/ICCV_2019.png" data-photo="data/photos/2019_10_ICCV.jpg">
+        <li class="timeline-item event" data-location="Seoul, South Korea" data-logo="data/logos/ICCV_2019.png">
           <time datetime="2019-10">Oct. 2019</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
@@ -230,7 +230,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>ENS Paris-Saclay · Paris, France</p>
           </div>
         </li>
-        <li class="timeline-item event" data-location="Long Beach, USA" data-logo="data/logos/CVPR_2019.png" data-photo="data/photos/2019_06_CVPR.jpg">
+        <li class="timeline-item event" data-location="Long Beach, USA" data-logo="data/logos/CVPR_2019.png">
           <time datetime="2019-06">Jun. 2019</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>

@@ -429,34 +429,14 @@
     .event-card.selects-location { cursor: pointer; }
     .event-card.selects-location:hover { background: var(--surface); }
 
-    .event-photo-button {
-      display: inline;
-      flex: 0 0 auto;
-      border: 0;
-      padding: 0;
-      color: var(--blue);
-      background: transparent;
-      text-align: left;
-      cursor: pointer;
-    }
-
-    .event-photo-cue {
-      display: inline;
-      font-size: 11px;
-      font-weight: 400;
-    }
-
-    .event-photo-button:focus-visible,
-    .gallery-photo:focus-visible,
-    .photo-arrow:focus-visible,
-    .photo-close:focus-visible {
+    .logo-close:focus-visible {
       outline: 2px solid var(--blue);
       outline-offset: 4px;
       border-radius: 3px;
     }
 
-    .photo-dialog {
-      --photo-inset: clamp(12px, 2.5vw, 18px);
+    .logo-dialog {
+      --logo-inset: clamp(12px, 2.5vw, 18px);
       width: min(760px, calc(100% - 32px));
       max-width: none;
       max-height: calc(100% - 32px);
@@ -469,23 +449,19 @@
       box-shadow: 0 18px 60px rgba(20, 28, 34, .25);
     }
 
-    .photo-dialog::backdrop { background: rgba(20, 28, 34, .55); }
-    .photo-dialog.showing-logo .photo-viewer { height: min(440px, calc(100dvh - 150px), 75vw); background: #fff; }
-    .photo-dialog.showing-logo .photo-image { background: #fff; }
-    .photo-dialog.showing-logo .photo-arrow { display: none; }
-
-    .photo-heading {
+    .logo-dialog::backdrop { background: rgba(20, 28, 34, .55); }
+    .logo-heading {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding: 14px var(--photo-inset);
+      padding: 14px var(--logo-inset);
     }
 
-    .photo-title { margin: 0; font-size: 15px; line-height: 1.4; }
-    .photo-date { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+    .logo-title { margin: 0; font-size: 15px; line-height: 1.4; }
+    .logo-date { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
 
-    .photo-close {
+    .logo-close {
       flex: 0 0 auto;
       width: 36px;
       height: 36px;
@@ -497,88 +473,23 @@
       cursor: pointer;
     }
 
-    .photo-viewer {
+    .logo-viewer {
       position: relative;
-      margin: 0 var(--photo-inset) var(--photo-inset);
-      height: min(520px, calc(100dvh - 210px), 75vw);
-      background: var(--surface);
+      margin: 0 var(--logo-inset) var(--logo-inset);
+      height: min(440px, calc(100dvh - 150px), 75vw);
+      background: #fff;
     }
 
-    .photo-image {
+    .logo-image {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: contain;
-      background: var(--surface);
+      background: #fff;
     }
 
-    .photo-image[hidden], .photo-status[hidden] { display: none; }
-    .photo-status { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 24px 18px; color: var(--muted); font-size: 13px; }
-
-    .photo-arrow {
-      position: absolute;
-      top: 50%;
-      display: grid;
-      place-items: center;
-      width: 44px;
-      height: 44px;
-      padding: 0;
-      border: 0;
-      border-radius: 50%;
-      color: #fff;
-      background: rgba(20, 28, 34, .28);
-      transform: translateY(-50%);
-      cursor: pointer;
-      transition: background 150ms ease;
-    }
-    .photo-arrow:hover, .photo-arrow:focus-visible { background: rgba(20, 28, 34, .55); }
-    .photo-arrow svg { width: 22px; height: 22px; opacity: .85; }
-    #photo-previous { left: 12px; }
-    #photo-next { right: 12px; }
-
-    .conference-gallery { width: 100%; min-width: 0; margin: 14px auto 0; }
-    .gallery-heading { margin: 0 0 8px; font-size: 12px; line-height: 16px; font-weight: 600; }
-
-    .gallery-strip {
-      display: flex;
-      gap: 10px;
-      margin: 0;
-      padding: 4px;
-      overflow-x: auto;
-      list-style: none;
-      scroll-snap-type: x mandatory;
-      scrollbar-color: #c9d1d8 transparent;
-      scrollbar-width: thin;
-    }
-
-    .gallery-strip li { flex: 0 0 calc((100% - 40px) / 5); min-width: 0; scroll-snap-align: center; }
-
-    .gallery-photo {
-      display: block;
-      width: 100%;
-      border: 0;
-      padding: 0;
-      color: var(--ink);
-      background: transparent;
-      text-align: left;
-      cursor: pointer;
-    }
-
-    .gallery-photo img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 78px;
-      aspect-ratio: 116 / 78;
-      border-radius: 7px;
-      object-fit: cover;
-      background: var(--surface);
-    }
-
-    .gallery-photo:hover { color: var(--blue); }
-    .gallery-photo:hover img { opacity: .85; }
-    .gallery-title { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 6px; font-size: 11px; line-height: 14px; font-weight: 600; }
-    .gallery-location { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--muted); font-size: 10px; line-height: 14px; }
+    .logo-image[hidden], .logo-status[hidden] { display: none; }
+    .logo-status { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 24px 18px; color: var(--muted); font-size: 13px; }
 
     .event-separator {
       color: #999;
@@ -639,14 +550,12 @@
 
     .embedded .page {
       display: grid;
-      grid-template-rows: minmax(0, 1fr) 156px;
+      grid-template-rows: minmax(0, 1fr);
       gap: 14px;
       width: 100%;
       height: 100%;
       padding: 0;
     }
-
-    .embedded .conference-gallery { margin-top: 0; }
 
     .embedded header,
     .embedded .toolbar { display: none; }
@@ -766,29 +675,19 @@
         </div>
       </aside>
     </section>
-    <section class="conference-gallery" aria-labelledby="gallery-heading">
-      <h2 class="gallery-heading" id="gallery-heading">Conference photos</h2>
-      <ul class="gallery-strip" id="conference-gallery"></ul>
-    </section>
   </main>
 
-  <dialog class="photo-dialog" id="photo-dialog" aria-labelledby="photo-title" aria-describedby="photo-date">
-    <div class="photo-heading">
+  <dialog class="logo-dialog" id="logo-dialog" aria-labelledby="logo-title" aria-describedby="logo-date">
+    <div class="logo-heading">
       <div>
-        <h2 class="photo-title" id="photo-title" aria-live="polite" aria-atomic="true"></h2>
-        <p class="photo-date" id="photo-date"></p>
+        <h2 class="logo-title" id="logo-title" aria-live="polite" aria-atomic="true"></h2>
+        <p class="logo-date" id="logo-date"></p>
       </div>
-      <button class="photo-close" id="photo-close" type="button" aria-label="Close photo" autofocus>×</button>
+      <button class="logo-close" id="logo-close" type="button" aria-label="Close logo" autofocus>×</button>
     </div>
-    <div class="photo-viewer">
-      <p class="photo-status" id="photo-status" role="status" hidden></p>
-      <img class="photo-image" id="photo-image" alt="" hidden>
-      <button class="photo-arrow" id="photo-previous" type="button" aria-label="Previous photo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg>
-      </button>
-      <button class="photo-arrow" id="photo-next" type="button" aria-label="Next photo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg>
-      </button>
+    <div class="logo-viewer">
+      <p class="logo-status" id="logo-status" role="status" hidden></p>
+      <img class="logo-image" id="logo-image" alt="" hidden>
     </div>
   </dialog>
 
@@ -842,7 +741,6 @@
             type,
             title: heading.textContent.trim(),
             location,
-            photo: item.dataset.photo || null,
             logo,
             logoAlt,
             description,
@@ -2300,127 +2198,35 @@
       const rotateControl = document.getElementById('rotate-control');
       const filters = Array.from(document.querySelectorAll('.filter'));
       const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const photoDialog = document.getElementById('photo-dialog');
-      const photoImage = document.getElementById('photo-image');
-      const photoStatus = document.getElementById('photo-status');
-      const gallery = document.getElementById('conference-gallery');
-      const photoEvents = allEvents
-        .filter((event) => event.photo)
-        .sort((a, b) => b.dateTime.localeCompare(a.dateTime));
-      let photoIndex = 0;
-
-      function openPhoto(event) {
-        photoDialog.classList.remove('showing-logo');
-        photoIndex = photoEvents.indexOf(event);
-        document.getElementById('photo-title').textContent = event.title;
-        document.getElementById('photo-date').textContent = event.date;
-        photoImage.hidden = true;
-        photoImage.alt = 'Conference photo from ' + event.title;
-        photoStatus.textContent = 'Loading photo…';
-        photoStatus.hidden = false;
-        photoImage.src = event.photo;
-        if (!photoDialog.open) photoDialog.showModal();
-      }
+      const logoDialog = document.getElementById('logo-dialog');
+      const logoImage = document.getElementById('logo-image');
+      const logoStatus = document.getElementById('logo-status');
 
       function openLogo(event) {
-        photoDialog.classList.add('showing-logo');
-        document.getElementById('photo-title').textContent = event.title;
-        document.getElementById('photo-date').textContent = event.date;
-        photoImage.hidden = true;
-        photoImage.alt = event.logoAlt + ' logo';
-        photoStatus.textContent = 'Loading logo…';
-        photoStatus.hidden = false;
-        photoImage.src = event.logo;
-        if (!photoDialog.open) photoDialog.showModal();
+        document.getElementById('logo-title').textContent = event.title;
+        document.getElementById('logo-date').textContent = event.date;
+        logoImage.hidden = true;
+        logoImage.alt = event.logoAlt + ' logo';
+        logoStatus.textContent = 'Loading logo…';
+        logoStatus.hidden = false;
+        logoImage.src = event.logo;
+        if (!logoDialog.open) logoDialog.showModal();
       }
 
-      function stepPhoto(direction) {
-        openPhoto(photoEvents[(photoIndex + direction + photoEvents.length) % photoEvents.length]);
-      }
-
-      document.getElementById('photo-previous').addEventListener('click', () => stepPhoto(-1));
-      document.getElementById('photo-next').addEventListener('click', () => stepPhoto(1));
-      photoDialog.addEventListener('keydown', (event) => {
-        if (photoDialog.classList.contains('showing-logo')) return;
-        if (event.altKey || event.ctrlKey || event.metaKey) return;
-        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-          event.preventDefault();
-          stepPhoto(event.key === 'ArrowLeft' ? -1 : 1);
-        }
+      logoImage.addEventListener('load', () => {
+        logoImage.hidden = false;
+        logoStatus.hidden = true;
       });
-
-      function centerGalleryItem(item) {
-        const bounds = item.getBoundingClientRect();
-        const stripBounds = gallery.getBoundingClientRect();
-        const left = gallery.scrollLeft + bounds.left + bounds.width / 2 - stripBounds.left - gallery.clientWidth / 2;
-        gallery.scrollTo({ left, behavior: reducedMotion ? 'instant' : 'smooth' });
-      }
-
-      // Only deliberate pointer movement starts recentering. Scrolling beneath a
-      // stationary cursor must not trigger a chain of new hover targets.
-      let hoverTarget = null;
-      let hoverTimer;
-      gallery.addEventListener('pointermove', (event) => {
-        if (event.pointerType !== 'mouse' || photoDialog.open) return;
-        const item = event.target.closest('li');
-        if (!item || item === hoverTarget) return;
-        hoverTarget = item;
-        clearTimeout(hoverTimer);
-        hoverTimer = setTimeout(() => {
-          if (!photoDialog.open) centerGalleryItem(item);
-        }, 150);
+      logoImage.addEventListener('error', () => {
+        logoImage.hidden = true;
+        logoStatus.textContent = 'This logo could not be loaded. Please try again.';
+        logoStatus.hidden = false;
       });
-      gallery.addEventListener('pointerleave', () => {
-        clearTimeout(hoverTimer);
-        hoverTarget = null;
-      });
-
-      function renderPhotoGallery() {
-        photoEvents.forEach((event) => {
-          const item = document.createElement('li');
-          const button = document.createElement('button');
-          button.type = 'button';
-          button.className = 'gallery-photo';
-          button.setAttribute('aria-label', 'View photo from ' + event.title);
-          button.setAttribute('aria-haspopup', 'dialog');
-          button.setAttribute('aria-controls', 'photo-dialog');
-          button.title = event.title;
-          const image = document.createElement('img');
-          image.src = event.photo;
-          image.alt = '';
-          image.loading = 'lazy';
-          image.decoding = 'async';
-          image.width = 116;
-          image.height = 78;
-          const [conference, location] = event.title.split(' · ');
-          const caption = document.createElement('span');
-          caption.className = 'gallery-title';
-          caption.textContent = conference;
-          const place = document.createElement('span');
-          place.className = 'gallery-location';
-          place.textContent = location;
-          button.append(image, caption, place);
-          button.addEventListener('click', () => openPhoto(event));
-          button.addEventListener('focus', () => centerGalleryItem(item));
-          item.appendChild(button);
-          gallery.appendChild(item);
-        });
-      }
-
-      photoImage.addEventListener('load', () => {
-        photoImage.hidden = false;
-        photoStatus.hidden = true;
-      });
-      photoImage.addEventListener('error', () => {
-        photoImage.hidden = true;
-        photoStatus.textContent = 'This photo could not be loaded. Please try again.';
-        photoStatus.hidden = false;
-      });
-      document.getElementById('photo-close').addEventListener('click', () => photoDialog.close());
-      photoDialog.addEventListener('click', (event) => {
-        const bounds = photoDialog.getBoundingClientRect();
-        if (event.target === photoDialog && (event.clientX < bounds.left || event.clientX > bounds.right ||
-          event.clientY < bounds.top || event.clientY > bounds.bottom)) photoDialog.close();
+      document.getElementById('logo-close').addEventListener('click', () => logoDialog.close());
+      logoDialog.addEventListener('click', (event) => {
+        const bounds = logoDialog.getBoundingClientRect();
+        if (event.target === logoDialog && (event.clientX < bounds.left || event.clientX > bounds.right ||
+          event.clientY < bounds.top || event.clientY > bounds.bottom)) logoDialog.close();
       });
 
       let centerLon = 8;
@@ -2762,7 +2568,7 @@
           logoButton.className = 'event-logo-button';
           logoButton.setAttribute('aria-label', 'View ' + event.logoAlt + ' logo');
           logoButton.setAttribute('aria-haspopup', 'dialog');
-          logoButton.setAttribute('aria-controls', 'photo-dialog');
+          logoButton.setAttribute('aria-controls', 'logo-dialog');
           logoButton.title = 'View ' + event.logoAlt + ' logo';
           const logo = document.createElement('img');
           logo.className = 'event-logo-mark';
@@ -2781,20 +2587,6 @@
           heading.className = 'event-title';
           heading.textContent = event.title;
           headingLine.appendChild(heading);
-          if (event.photo) {
-            item.classList.add('has-photo');
-            const photoButton = document.createElement('button');
-            photoButton.type = 'button';
-            photoButton.className = 'event-photo-button';
-            photoButton.setAttribute('aria-haspopup', 'dialog');
-            photoButton.setAttribute('aria-controls', 'photo-dialog');
-            const cue = document.createElement('span');
-            cue.className = 'event-photo-cue';
-            cue.textContent = 'View photo ↗';
-            photoButton.appendChild(cue);
-            photoButton.addEventListener('click', () => openPhoto(event));
-            headingLine.appendChild(photoButton);
-          }
           const description = document.createElement('p');
           description.className = 'event-description';
           description.textContent = event.description.replace(/\s*·\s*/g, '\u00a0·\u00a0');
@@ -3126,7 +2918,6 @@
       new ResizeObserver(resize).observe(stage);
       resize();
       renderDetails();
-      renderPhotoGallery();
       updateStats();
       if (reducedMotion) {
         rotateControl.textContent = 'Start rotation';

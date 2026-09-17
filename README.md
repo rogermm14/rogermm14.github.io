@@ -4,10 +4,10 @@ This is a static site, so no build step is needed. Routine content updates requi
 editing only these two files:
 
 - `publications-content.js` for publications.
-- `timeline-content.js` for timeline entries, logos, locations, and photos.
+- `timeline-content.js` for timeline entries, logos, and locations.
 
 Both files contain HTML inside a JavaScript template string. Keep the opening and
-closing backticks intact. Image, poster, logo, and photo files still need to be
+closing backticks intact. Image, poster, and logo files still need to be
 copied into their corresponding asset folders.
 
 ## 1. Add a publication
@@ -38,8 +38,7 @@ content and attributes. For example:
 ```html
 <li class="timeline-item event"
     data-location="Barcelona"
-    data-logo="data/logos/CVPR_2027.png"
-    data-photo="data/photos/2027_06_CVPR.jpg">
+    data-logo="data/logos/CVPR_2027.png">
   <time datetime="2027-06">Jun. 2027</time>
   <span class="timeline-marker" aria-hidden="true">◆</span>
   <div>
@@ -58,7 +57,6 @@ The attributes on the opening `<li>` control the related visuals:
 - `data-logo` is required for every entry and points to a file in `data/logos/`.
 - `data-location` is optional. Add it to connect the entry to a globe marker and
   city filter.
-- `data-photo` is optional and adds the image to the conference gallery and viewer.
 
 ### Show the event on the globe
 
@@ -80,21 +78,6 @@ Then use `data-location="Rome, Italy"` on timeline entries for that city. Entrie
 without `data-location`, such as remote events, still appear in the timeline and
 in the globe view's **All** event list. They do not appear under a city filter and
 cannot select or zoom to a globe marker.
-
-### Attach a conference photo
-
-1. Add the image to `data/photos/`, e.g. `2027_06_CVPR.jpg`.
-2. Add its path directly to the timeline entry:
-
-   ```html
-   data-photo="data/photos/2027_06_CVPR.jpg"
-   ```
-
-The item must also have a `data-location` that matches a globe city. Image paths
-and filename capitalization must match exactly.
-
-The gallery, photo dialog, and arrow navigation include the new photo automatically.
-Adding a file to the photos folder alone does not register it.
 
 ### Associate a logo with every timeline entry
 
@@ -123,5 +106,4 @@ from **All** selects and zooms to that city.
 
 From this directory, run `python3 -m http.server 8000`, then open
 `http://localhost:8000/`. Check publication filters, timeline filters, the globe
-location selection and deselection, photo loading, and arrow navigation before
-publishing.
+location selection and deselection, and logo dialogs before publishing.
