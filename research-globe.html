@@ -2229,9 +2229,10 @@
           event.clientY < bounds.top || event.clientY > bounds.bottom)) logoDialog.close();
       });
 
-      let centerLon = 8;
-      let centerLat = 35;
-      let zoom = 1;
+      const initialView = { lon: 8, lat: 35, zoom: 1 };
+      let centerLon = initialView.lon;
+      let centerLat = initialView.lat;
+      let zoom = initialView.zoom;
       const minZoom = .72;
       const maxZoom = 10;
       let autoRotate = !reducedMotion;
@@ -2248,6 +2249,33 @@
       let needsDraw = true;
       let pinchDistance = 0;
       let locationTransition = null;
+
+      function showAllLocations() {
+        selected = null;
+        if (reducedMotion) {
+          centerLon = initialView.lon;
+          centerLat = initialView.lat;
+          zoom = initialView.zoom;
+          locationTransition = null;
+        } else {
+          locationTransition = {
+            start: performance.now(),
+            lon: centerLon,
+            lat: centerLat,
+            zoom,
+            deltaLon: ((initialView.lon - centerLon) % 360 + 540) % 360 - 180,
+            targetLat: initialView.lat,
+            targetZoom: initialView.zoom,
+            duration: 700
+          };
+        }
+        autoRotate = !reducedMotion;
+        rotateControl.textContent = autoRotate ? 'Pause rotation' : 'Start rotation';
+        rotateControl.setAttribute('aria-pressed', autoRotate);
+        hovered = null;
+        tooltip.hidden = true;
+        renderDetails();
+      }
 
       function focusLocation(location) {
         const previousLocation = selected || { lat: centerLat, lon: centerLon };
@@ -2648,10 +2676,7 @@
           if (isActive) activeButton = button;
           button.addEventListener('click', () => {
             if (isAll || selected === location) {
-              selected = null;
-              locationTransition = null;
-              tooltip.hidden = true;
-              renderDetails();
+              showAllLocations();
               return;
             }
             focusLocation(location);
@@ -2738,9 +2763,6 @@
         moved = false;
         lastX = event.clientX;
         lastY = event.clientY;
-        autoRotate = false;
-        rotateControl.textContent = 'Resume rotation';
-        rotateControl.setAttribute('aria-pressed', 'false');
         canvas.classList.add('dragging');
       });
 
@@ -2802,6 +2824,14 @@
         }
       });
 
+      function endDrag() {
+        dragging = false;
+        canvas.classList.remove('dragging');
+      }
+
+      canvas.addEventListener('pointercancel', endDrag);
+      canvas.addEventListener('lostpointercapture', endDrag);
+
       canvas.addEventListener('pointerleave', () => {
         if (!dragging) {
           if (hovered) needsDraw = true;
@@ -2814,9 +2844,6 @@
         event.preventDefault();
         locationTransition = null;
         zoom = Math.max(minZoom, Math.min(maxZoom, zoom - event.deltaY * .001));
-        autoRotate = false;
-        rotateControl.textContent = 'Resume rotation';
-        rotateControl.setAttribute('aria-pressed', 'false');
         needsDraw = true;
       }, { passive: false });
 
@@ -2828,13 +2855,11 @@
           event.touches[0].clientY - event.touches[1].clientY
         );
         if (pinchDistance) zoom = Math.max(minZoom, Math.min(maxZoom, zoom * distance / pinchDistance));
-        autoRotate = false;
-        rotateControl.textContent = 'Resume rotation';
-        rotateControl.setAttribute('aria-pressed', 'false');
         needsDraw = true;
         pinchDistance = distance;
       }, { passive: true });
       canvas.addEventListener('touchend', () => { pinchDistance = 0; });
+      canvas.addEventListener('touchcancel', () => { pinchDistance = 0; });
 
       function setActiveFilter(category) {
         if (!['all', 'career', 'award', 'event'].includes(category)) return;
@@ -2906,8 +2931,9 @@
           needsDraw = true;
           if (progress === 1) locationTransition = null;
         }
-        if (autoRotate) centerLon = (centerLon + elapsed * .0035 + 540) % 360 - 180;
-        if (needsDraw || (autoRotate && time - lastDrawTime >= 33)) {
+        const spinning = autoRotate && !selected && !locationTransition && !dragging && !pinchDistance;
+        if (spinning) centerLon = (centerLon + elapsed * .0035 + 540) % 360 - 180;
+        if (needsDraw || (spinning && time - lastDrawTime >= 33)) {
           draw();
           needsDraw = false;
           lastDrawTime = time;
