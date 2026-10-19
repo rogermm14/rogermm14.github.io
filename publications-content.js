@@ -25,6 +25,57 @@ document.getElementById("publications-component").innerHTML = `
        </td>
      </tr>
 
+<! MUMINS, 2027 >
+<tr class="publication-row" data-tags="Generative AI;Medical Imaging">
+  <td class="paper-media-cell">
+    <a href="images/2027_MUMINS_teaser.png">
+      <div class="paper-media">
+        <img src="images/2027_MUMINS_teaser.png" alt="MUMINS teaser">
+      </div>
+    </a>
+  </td>
+  <td class="paper-info-cell">
+    <papertitle>MUMINS: Metadata-conditioned Uncertainty-aware Medical Image Next-state Synthesis</papertitle>
+    <br>
+    Anna Oliveras, <strong>Roger Marí</strong>, Rafael Redondo, Oriol Guardià, Cynthia I. Ugwu, Ana Tost, Bhalaji Nagarajan, Carolina Migliorelli, Vicent Ribas, Petia Radeva
+    <br>
+    <em>WACV</em>, 2027
+    <br>
+    <a href="https://arxiv.org/pdf/2609.17169">paper</a>
+    /
+    <a href="https://github.com/aolivtous/MUMINS">code</a>
+    <p></p>
+    <p style="margin-bottom: 0;">
+      MUMINS jointly diffuses a baseline scan and its follow-up residual at a given time interval. It additionally predicts a spatial uncertainty map in a single reverse diffusion process.
+    </p>
+
+  </td>
+</tr>
+
+<! NDVI prediction, 2026 >
+<tr class="publication-row" data-tags="Earth Observation">
+  <td class="paper-media-cell">
+    <a href="images/2026_NDVIpred_teaser.png">
+      <div class="paper-media">
+        <img src="images/2026_NDVIpred_teaser.png" alt="NDVI MVEO teaser">
+      </div>
+    </a>
+  </td>
+  <td class="paper-info-cell">
+    <papertitle>From Continental Benchmarks to Local Short-Range NDVI Forecasting</papertitle>
+    <br>
+    Cynthia I. Ugwu, <strong>Roger Marí</strong>
+    <br>
+    <em>BMVC Workshops</em>, 2026
+    <br>
+    <a href="https://github.com/multimedia-eurecat/tmp">code</a>
+    <p></p>
+    <p style="margin-bottom: 0;">
+    We investigate the transferability of spatiotemporal forecasting architectures to short-range NDVI forecasting using Sentinel-2 and meteorology over crop fields in Catalonia.
+    </p>
+
+  </td>
+</tr>
 
 <! SeasonStereo, 2026 >
 <tr class="publication-row" data-tags="Earth Observation;3D Reconstruction;Stereovision;Generative AI" onmouseout="seasonstereo_stop()" onmouseover="seasonstereo_start()">
